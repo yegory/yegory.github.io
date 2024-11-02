@@ -4507,7 +4507,7 @@ a.valedictorian {
 
   .s-intro__content-btns .btn {
     position: relative;
-    bottom: -12em; /* Moves text up */
+    bottom: -10em; /* Moves text up */
     font-size: 0.8em; /* Increase font size */
     width: 80%;
   }

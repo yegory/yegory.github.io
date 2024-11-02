@@ -51,7 +51,7 @@
                   <ul class="s-header__menu-links">
                      <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
                      <li><a class="smoothscroll" href="#about">About</a></li>
-                     <li><a class="smoothscroll" href="#works">Works</a></li>
+                     <li><a class="smoothscroll" href="#works">Key Projects</a></li>
                      <li><a class="smoothscroll" href="#footer">Contact</a></li>
                   </ul>
                   <!-- s-header__menu-links -->    
@@ -67,9 +67,10 @@
             <div class="row s-intro__content width-sixteen-col">
                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
                   <div class="s-intro__content-text">
-                     <h1 class="s-intro__content-title">
-                        Yegor Yeryomenko - experienced BSc in Computer Science
-                     </h1>
+                    <h1 class="s-intro__content-title">
+                      Yegor Yeryomenko <br>
+                      <span class="small-font">Experienced BSc in Computer Science</span>
+                    </h1>
                      <div class="s-intro__content-btns">
                         <a class="smoothscroll btn btn--stroke" href="#about">More About Me</a>
                         <a class="smoothscroll btn" href="#footer">Get In Touch</a>
@@ -114,16 +115,29 @@
                   </div>
                   <!-- end section-header -->
                   <p class="attention-getter">
-                     I am Yegor, 22 years old, from <strong>Kazakhstan</strong>. In May 2024, I completed my Bachelor’s degree in <strong>Computer Science</strong> at the <strong>University of British Columbia</strong> with <strong>Distinction</strong>. I worked as a teaching assistant for a <strong>machine learning</strong> course at UBC during the summer term of 2023.
+                     I am Yegor, 22 years old, from <strong>Kazakhstan</strong>. 
                      <br><br>
-                     <strong>International living experiences</strong>, particularly in Kazakhstan, the UAE, Turkey, and Canada, have shaped my broader perspective and adaptability to new environments, which I value greatly.
+                     In May 2024, I completed my Bachelor’s degree in <strong>Computer Science</strong> at the <strong>University of British Columbia</strong> with <strong>Distinction</strong>. 
                      <br><br>
-                     I'm fluent in both <strong>English</strong> and <strong>Russian</strong>, which have been useful in connecting with diverse people and cultures along the way.   
+                     Currently, I reside in Vancouver, BC, Canada, and I hold a valid open Canadian work permit. 
                      <br><br>
-                     Outside of academics, sports have played a significant role in my life. I have 2 years of both: <strong>soccer</strong> and <strong>boxing</strong>; together with 4 years total of <strong>gym</strong> and/or <strong>calisthenics</strong>. I’ve also played the flute and the alto saxophone.
-                     <br><br>
-                     I truly value building <strong>meaningful connections</strong>, as friendships have been an important part of my life, especially throughout my time in different countries.
+                     I am actively seeking work, where my profile meets Employer's requirements.
+                     <br>
+                     <a href="#" id="summaryLink" class="collapsible">More details</a>
                   </p>
+                  <div id="summaryDetails" class="collapsible-content">
+                    <p class="attention-getter">
+                      I'm fluent in both <strong>English</strong> and <strong>Russian</strong>, which have been useful in connecting with diverse people and cultures along the way.   
+                      <br><br>
+
+                      <strong>International living experiences</strong>, particularly in Kazakhstan, the UAE, Turkey, and Canada, have shaped my broader perspective and adaptability to new environments, which I value greatly.
+                      <br><br>
+                      
+                      Outside of academics, sports have played a significant role in my life. I have 2 years of both: <strong>soccer</strong> and <strong>boxing</strong>; together with 4 years total of <strong>gym</strong> and/or <strong>calisthenics</strong>. I’ve also played the flute and the alto saxophone.
+                      <br><br>
+                      I truly value building <strong>meaningful connections</strong>, as friendships have been an important part of my life, especially throughout my time in different countries.
+                   </p>
+                 </div>
                   <div class="grid-list-items s-about__blocks">
                      <div class="grid-list-items__item s-about__block">
                         <h4 class="s-about__block-title">Education</h4>
@@ -357,5 +371,31 @@
              }
          });
       </script>
+      <script>
+        document.getElementById("summaryLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var content = document.getElementById("summaryDetails");
+            var linkText = document.getElementById("summaryLink"); // Get the link text element
+    
+            if (content.style.maxHeight) {
+                // Close the collapsible
+                content.style.maxHeight = null;
+                content.classList.remove("active"); // Remove active class for transition
+                linkText.textContent = "More Details"; // Change text to "More Details"
+            } else {
+                // Open the collapsible
+                content.style.maxHeight = content.scrollHeight + "px"; // Set maxHeight to scrollHeight
+                content.classList.add("active"); // Add active class for transition
+                linkText.textContent = "Less Details"; // Change text to "Less Details"
+                content.classList.add("flash"); // Add flash effect
+                
+                // Remove the flash class after the animation is complete
+                setTimeout(() => {
+                    content.classList.remove("flash");
+                }, 500);
+            }
+        });
+    </script>
+    
    </body>
 </html>

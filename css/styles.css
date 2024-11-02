@@ -4487,3 +4487,9 @@ td:last-child {
 .flash {
   animation: flash 0.5s; /* Flash animation duration */
 }
+
+/* experienced BSc in Computer Science */
+.small-font { 
+  font-size: 0.55em; /* Adjust the value as needed */
+  font-weight: normal; /* Adjust if necessary */
+}

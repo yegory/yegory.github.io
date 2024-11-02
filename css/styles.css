@@ -207,7 +207,7 @@
    * vertical space unit : 32px
    */
     --base-size     : 62.5%;
-    --multiplier    : 1.2;
+    --multiplier    : 1;
     --base-font-size: calc(2rem * var(--multiplier));
     --space         : calc(3.2rem * var(--multiplier));
 
@@ -3923,20 +3923,6 @@ td:last-child {
   text-decoration: underline; /* Add underline for regular links */
 }
 
-/* Specific styles for the Valedictorian link */
-.s-about__list a.valedictorian {
-  color: red; /* Change color to red for emphasis */
-  font-weight: bold; /* Make the text bold */
-  text-decoration: none; /* Remove underline for this link */
-}
-
-/* Optional: Hover effect for the Valedictorian link */
-.s-about__list a.valedictorian:hover {
-  color: darkred; /* Darker shade on hover */
-  text-decoration: none; /* Ensure no underline on hover */
-}
-
-
 .s-about__list li {
     font-weight  : 500;
     margin-bottom: var(--vspace-0_625);
@@ -4462,7 +4448,7 @@ td:last-child {
 
 .collapsible {
   cursor: pointer;
-  color: red !important; /* Ensure red color */
+  color: #d90000 !important; /* Ensure red color */
   text-decoration: none !important; /* Ensure no underline */
 }
 
@@ -4493,3 +4479,41 @@ td:last-child {
   font-size: 0.55em; /* Adjust the value as needed */
   font-weight: normal; /* Adjust if necessary */
 }
+
+/* Style for More Details link */
+a.valedictorian {
+  color: #d90000 !important; /* Adjusts to a darker red */
+  text-decoration: none; /* Removes underline */
+}
+
+/* Default styling */
+.s-intro__content-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.s-intro__content-btns {
+  margin-top: 20px; /* Default button spacing */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 1080px) {
+  /* Move "Experienced BSc" text up */
+  .s-intro__content-title{
+    position: relative;
+    top: -3em; /* Moves text up */
+  }
+
+  .s-intro__content-btns .btn {
+    position: relative;
+    bottom: -10em; /* Moves text up */
+    font-size: 0.8em; /* Increase font size */
+    width: 80%;
+  }
+
+  .s-intro__btn-download .btn {
+    font-size: 0.7em; /* Increase font size */
+  }
+}
+

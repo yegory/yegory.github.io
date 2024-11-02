@@ -50,7 +50,7 @@
                <nav class="s-header__nav">
                   <ul class="s-header__menu-links">
                      <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-                     <li><a class="smoothscroll" href="#about">About</a></li>
+                     <li><a class="smoothscroll" href="#about">Summary</a></li>
                      <li><a class="smoothscroll" href="#works">Key Projects</a></li>
                      <li><a class="smoothscroll" href="#footer">Contact</a></li>
                   </ul>
@@ -63,47 +63,36 @@
          <!-- end s-header -->
          <!-- # intro
             ================================================== -->
-         <section id="intro" class="s-intro target-section">
-            <div class="row s-intro__content width-sixteen-col">
-               <div class="column lg-12 s-intro__content-inner grid-block grid-16">
-                  <div class="s-intro__content-text">
-                    <h1 class="s-intro__content-title">
-                      Yegor Yeryomenko <br>
-                      <span class="small-font">Experienced BSc in Computer Science</span>
-                    </h1>
-                     <div class="s-intro__content-btns">
-                        <a class="smoothscroll btn btn--stroke" href="#about">More About Me</a>
-                        <a class="smoothscroll btn" href="#footer">Get In Touch</a>
-                     </div>
-                     <!-- s-intro__content-btns -->   
+            <section id="intro" class="s-intro target-section">
+              <div class="row s-intro__content width-sixteen-col">
+                  <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+                      <div class="s-intro__content-text">
+                          <h1 class="s-intro__content-title">
+                              Yegor Yeryomenko <br>
+                              <span class="small-font">Experienced BSc in Computer Science</span>
+                          </h1>
+                          <div class="s-intro__content-btns">
+                              <a class="smoothscroll btn btn--stroke btn-summary" href="#about">Summary</a>
+                              <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
+                          </div>
+                          <!-- s-intro__content-btns -->   
+                      </div>
+                      <!-- s-intro__content-text -->                     
                   </div>
-                  <!-- s-intro__content-text -->                     
-               </div>
-               <!-- s-intro__content-inner -->  
-            </div>
-            <!-- s-intro__content -->
-            <div class="s-intro__content-media">                               
-               <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
-            </div>
-            <!-- s-intro__content-media -->                
-            <div class="s-intro__btn-download">
-               <a class="btn btn--stroke" href="images/resume-yegor_y.pdf" target="_blank">
-               Get My CV
-               </a>
-            </div>
-            <!-- end s-intro__btn-download -->
-            <div class="s-intro__scroll-down">
-               <a href="#about" class="smoothscroll">
-                  <div class="scroll-icon">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-                        <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-                     </svg>
-                  </div>
-                  <span class="scroll-text u-screen-reader-text">Scroll Down</span>
-               </a>
-            </div>
-            <!-- s-intro__scroll-down -->
-         </section>
+                  <!-- s-intro__content-inner -->  
+              </div>
+              <!-- s-intro__content -->
+              <div class="s-intro__content-media">                               
+                  <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
+              </div>
+              <!-- s-intro__content-media -->                
+              <div class="s-intro__btn-download">
+                  <a class="btn btn--stroke btn-download" href="images/resume-yegor_y.pdf" target="_blank">
+                      Get My CV
+                  </a>
+              </div>
+          </section>
+          
          <!-- end s-intro -->
          <!-- # about
             ================================================== -->
@@ -150,10 +139,11 @@
                         <h4 class="s-about__block-title">Experience</h4>
                         <ul class="s-about__list">
                            <li>
-                              <a href="#" id="taLink" class="collapsible">
                               Applied ML Teaching Assistant
-                              </a>
                               <span>The University of British Columbia (2023)</span>
+                              <a href="#" id="taLink" class="collapsible">
+                                More details
+                              </a>
                            </li>
                         </ul>
                         <div id="taDetails" class="collapsible-content">
@@ -171,11 +161,11 @@
                               <span>UBC 2020-21 (87% average grade)</span>
                            </li>
                            <li>
-                              High School 
-                              <a href="images/NBC_award.jpg" target="_blank" class="valedictorian">
-                              Valedictorian
-                              </a>
+                              High School Valedictorian
                               <span>Necat British College — 2020</span>
+                              <a href="images/NBC_award.jpg" target="_blank" class="valedictorian">
+                              View Image
+                              </a>
                            </li>
                         </ul>
                      </div>
@@ -348,20 +338,24 @@
          ================================================== -->
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
+
       <!-- Script to make collapsible text about TA experience -->
       <script>
          document.getElementById("taLink").addEventListener("click", function(event) {
              event.preventDefault(); // Prevent default link behavior
              var content = document.getElementById("taDetails");
+             var linkText = document.getElementById("taLink"); // Get the link text element
          
              if (content.style.maxHeight) {
                  // Close the collapsible
                  content.style.maxHeight = null;
                  content.classList.remove("active"); // Remove active class for transition
+                 linkText.textContent = "More Details"; // Change text to "More Details"
              } else {
                  // Open the collapsible
                  content.style.maxHeight = content.scrollHeight + "px"; // Set maxHeight to scrollHeight
                  content.classList.add("active"); // Add active class for transition
+                 linkText.textContent = "Less Details"; // Change text to "Less Details"
                  content.classList.add("flash"); // Add flash effect
                  
                  // Remove the flash class after the animation is complete
@@ -396,6 +390,71 @@
             }
         });
     </script>
-    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const summaryBtn = document.querySelector('.btn-summary');
+
+          // Function to update the btn--stroke class based on window width
+          function updateButtonClass() {
+              if (window.innerWidth > 1080) {
+                  summaryBtn.classList.remove('btn--stroke');
+              } else {
+                  summaryBtn.classList.add('btn--stroke');
+              }
+          }
+
+          // Initial check when the page loads
+          updateButtonClass();
+
+          // Update class on window resize
+          window.addEventListener('resize', updateButtonClass);
+      });
+    </script>
+    <!-- Place this script before the closing </body> tag -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const downloadBtn = document.querySelector('.btn-download');
+
+          // Function to update the btn--stroke class based on window width
+          function updateButtonClass() {
+              if (window.innerWidth <= 1080) {
+                  downloadBtn.classList.remove('btn--stroke');
+              } else {
+                  downloadBtn.classList.add('btn--stroke');
+              }
+          }
+
+          // Initial check when the page loads
+          updateButtonClass();
+
+          // Update class on window resize
+          window.addEventListener('resize', updateButtonClass);
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const downloadBtn = document.querySelector('.s-intro__btn-download .btn-download');
+          const btnsContainer = document.querySelector('.s-intro__content-btns');
+  
+          // Function to move the button based on window width
+          function updateButtonPosition() {
+              if (window.innerWidth <= 1080) {
+                  // Move button to the btnsContainer
+                  btnsContainer.appendChild(downloadBtn);
+              } else {
+                  // Move button back to its original position
+                  const btnDownloadWrapper = document.querySelector('.s-intro__btn-download');
+                  btnDownloadWrapper.appendChild(downloadBtn);
+              }
+          }
+  
+          // Initial check when the page loads
+          updateButtonPosition();
+  
+          // Update button position on window resize
+          window.addEventListener('resize', updateButtonPosition);
+      });
+    </script>
+  
    </body>
 </html>

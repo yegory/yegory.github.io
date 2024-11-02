@@ -293,6 +293,13 @@
     }
 }
 
+/* Change multiplier for screens larger than 1080px */
+@media screen and (min-width: 1081px) {
+  :root {
+    --multiplier: 1.2; /* Adjusts multiplier for larger screens */
+  }
+}
+
 /* ------------------------------------------------------------------- 
  * ## grid variables
  * ------------------------------------------------------------------- */

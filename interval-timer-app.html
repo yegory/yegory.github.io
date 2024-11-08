@@ -1,117 +1,201 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-   <head>
-      <!--- basic page needs
-         ================================================== -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Yegor Yeryomenko</title>
-      <script>
-         document.documentElement.classList.remove('no-js');
-         document.documentElement.classList.add('js');
-      </script>
-      <!-- CSS
-         ================================================== -->
-      <link rel="stylesheet" href="css/vendor.css">
-      <link rel="stylesheet" href="css/styles.css">
-      <!-- favicons
-         ================================================== -->
-      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon.png">
-      <!-- Updated link -->
-      <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon.png">
-      <!-- Updated link -->
-      <link rel="manifest" href="site.webmanifest">
-   </head>
-   <body id="top">
-      <!-- preloader
-         ================================================== -->
-      <div id="preloader">
-         <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
+  <head>
+    <!--- basic page needs
+      ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yegor Yeryomenko</title>
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
+    <!-- CSS
+      ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- favicons
+      ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon.png">
+    <!-- Updated link -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon.png">
+    <!-- Updated link -->
+    <link rel="manifest" href="site.webmanifest">
+  </head>
+  <body id="top">
+    <!-- preloader
+      ================================================== -->
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <!-- page wrap
-         ================================================== -->
-      <div id="page" class="s-pagewrap">
-         <!-- # site header 
-            ================================================== -->
-         <header class="s-header">
-            <div class="row s-header__inner">
-               <div class="s-header__block">
-                  <div class="s-header__logo">
-                     <p class="logo-text">Yegor Y.</p>
-                  </div>
-                  <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-               </div>
-               <!-- end s-header__block -->
-               <nav class="s-header__nav">
-                  <ul class="s-header__menu-links">
-                     <li>
-                        <a href="index.html#works">Back</a>
-                     </li>
-                  </ul>
-                  <!-- s-header__menu-links -->    
-               </nav>
-               <!-- end s-header__nav -->
+    </div>
+    <!-- page wrap
+      ================================================== -->
+    <div id="page" class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header s-header-project">
+        <div class="row s-header__inner">
+          <div class="s-header__block">
+            <div class="s-header__logo">
+              <a href="index.html">
+                <p class="logo-text">Yegor Y.</p>
+              </a>
             </div>
-            <!-- end s-header__inner -->
-         </header>
-         <!-- end s-header -->
-         <!-- Project Section
-            ================================================== -->
-         <section id="works" class="s-works" style="padding-top: 60px;">
+            <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+          </div>
+          <!-- end s-header__block -->
+          <nav class="s-header__nav">
+            <ul class="s-header__menu-links">
+              <li><a href="index.html#works">Back</a></li>
+              <li><a class="smoothscroll" href="#footer">Contact</a></li>
+              <li><a href="images/resume-yegor_y.pdf" target="_blank">My Resume</a></li>
+            </ul>
+            <!-- s-header__menu-links -->    
+          </nav>
+          <!-- end s-header__nav -->
+        </div>
+        <!-- end s-header__inner -->
+      </header>
+      <!-- end s-header -->
+      <!-- Project Section
+        ================================================== -->
+      <section id="works" class="s-works" style="padding-top: 60px;">
+        <div class="row">
+          <div class="column">
+            <h3>Projects | Interval Timer App</h3>
+            <a href="https://github.com/yegory/WorkoutIntervalTimer">
+            Project Link
+            </a>
+            <p> 
+              In August of 2024, I developed my own iOS interval timer app built using Swift and SwiftUI. It enhanced my calisthenic workouts, featuring customization tailored to my needs. 
+            </p>
+            <section>
+              <h4>Questions Addressed</h4>
+              <ul>
+                <li>How to integrate seamless sound alerts without disrupting background audio.</li>
+                <li>Designing a user-friendly experience with intuitive animations and controls.</li>
+                <li>Syncing a timer and stopwatch to run concurrently without impacting performance.</li>
+              </ul>
+            </section>
+            <section>
+              <h4>Development Steps</h4>
+              <ol>
+                <li>Learned Swift and SwiftUI fundamentals, focusing on app development for iOS.</li>
+                <li>Identified key use cases and defined core functionalities, such as a working timer.</li>
+                <li>Built and tested the timer component to ensure real-time accuracy.</li>
+                <li>Added additional features, like a stopwatch, and enabled customization options.</li>
+                <li>Designed navigation screens to create a smooth user experience.</li>
+                <li>Implemented user preferences using UserDefaults for data persistence across sessions.</li>
+                <li>Enhanced user experience with intuitive animations for selecting sets and reps.</li>
+                <li>Integrated background sound alerts and ensured seamless transitions.</li>
+                <li>Planned for future expansion with a sidebar for additional features.</li>
+              </ol>
+            </section>
+            <section>
+              <h4>Key Takeaways</h4>
+              <ul>
+                <li>Developing this app gave me hands-on experience in SwiftUI and strengthened my confidence with iOS development.</li>
+                <li>I learned the importance of user-centered design, focusing on smooth, intuitive interactions to enhance the workout experience.</li>
+                <li>Balancing concurrent processes like the timer and stopwatch taught me how to handle real-time functionalities effectively.</li>
+              </ul>
+            </section>
+            <img src="images/TimerIntervalAppPreview.png" alt="Interval Timer App Preview" class="project-image">
+          </div>
+        </div>
+      </section>
+      <section id="works" class="s-works" style="padding-top: 60px;">
+        <div class="row">
+          <div class="column xl-6 tab-12">
+            <!-- Second column with 2 buttons -->
+            <a href="formula1-dbms.html" class="btn btn--primary btn--large u-fullwidth">Next Project</a>
+          </div>
+          <div class="column xl-6 tab-12">
+            <!-- First column with 1 button -->
+            <a href="index.html#works" class="btn btn--large u-fullwidth">Return Home</a>
+          </div>
+        </div>
+      </section>
+      <!-- # footer 
+        ================================================== -->
+      <footer id="footer" class="s-footer target-section">
+        <div class="row">
+          <div class="column lg-12">
+            <div class="section-header light-on-dark" data-num="03">
+              <h2 class="text-display-title">Get In Touch</h2>
+            </div>
+            <!-- end section-header -->
+          </div>
+        </div>
+        <div class="row s-footer__content">
+          <div class="column xl-6 md-12 s-footer__block s-footer__about">
+            <p class="attention-getter">
+              I am passionate about programming and solving complex tasks. I look forward to growing professionally along with like-minded individuals at your team.
+            </p>
+          </div>
+          <!-- end section-footer__about -->
+          <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
             <div class="row">
-               <div class="column">
-                  <h3>Projects | Interval Timer App</h3>
-                  <a href="https://github.com/yegory/WorkoutIntervalTimer">
-                  Project Link
-                  </a>
-                  <p> 
-                     In August of 2024, I developed my own iOS interval timer app built using Swift and SwiftUI. It enhanced my calisthenic workouts, featuring customization tailored to my needs. 
-                  </p>
-                  <section>
-                     <h4>Questions Addressed</h4>
-                     <ul>
-                        <li>How to integrate seamless sound alerts without disrupting background audio.</li>
-                        <li>Designing a user-friendly experience with intuitive animations and controls.</li>
-                        <li>Syncing a timer and stopwatch to run concurrently without impacting performance.</li>
-                     </ul>
-                  </section>
-                  <section>
-                     <h4>Development Steps</h4>
-                     <ol>
-                        <li>Learned Swift and SwiftUI fundamentals, focusing on app development for iOS.</li>
-                        <li>Identified key use cases and defined core functionalities, such as a working timer.</li>
-                        <li>Built and tested the timer component to ensure real-time accuracy.</li>
-                        <li>Added additional features, like a stopwatch, and enabled customization options.</li>
-                        <li>Designed navigation screens to create a smooth user experience.</li>
-                        <li>Implemented user preferences using UserDefaults for data persistence across sessions.</li>
-                        <li>Enhanced user experience with intuitive animations for selecting sets and reps.</li>
-                        <li>Integrated background sound alerts and ensured seamless transitions.</li>
-                        <li>Planned for future expansion with a sidebar for additional features.</li>
-                     </ol>
-                  </section>
-                  <section>
-                     <h4>Key Takeaways</h4>
-                     <ul>
-                        <li>Developing this app gave me hands-on experience in SwiftUI and strengthened my confidence with iOS development.</li>
-                        <li>I learned the importance of user-centered design, focusing on smooth, intuitive interactions to enhance the workout experience.</li>
-                        <li>Balancing concurrent processes like the timer and stopwatch taught me how to handle real-time functionalities effectively.</li>
-                     </ul>
-                  </section>
-                  <img src="images/TimerIntervalAppPreview.png" alt="Interval Timer App Preview" class="project-image">
-               </div>
+              <div class="column xl-4 lg-5 md-6 tab-12">
+                <h5>Connect</h5>
+                <ul class="link-list">
+                  <li><a href="https://www.linkedin.com/in/yegory/" target="_blank">LinkedIn</a></li>
+                </ul>
+                <ul class="link-list">
+                  <li><a href="https://github.com/yegory" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+              <div class="column xl-6 md-6 tab-12">
+                <h5>Contact Me</h5>
+                <ul class="link-list">
+                  <li>yeryomenko.y@gmail.com</li>
+                  <!-- <li><a href="tel:+1111111111">+111 111 1111</a></li> -->
+                </ul>
+              </div>
             </div>
-         </section>
-         <!-- end s-works -->
-      </div>
-      <!-- end page-wrap -->
-      <!-- Java Script
-         ================================================== -->
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
-   </body>
+          </div>
+          <!-- end section-footer__site-links -->
+        </div>
+        <!-- end section-footer__content -->
+        <div class="row s-footer__buttons">
+          <div class="column xl-6 tab-12">
+            <a href="mailto:yeryomenko.y@gmail.com" class="btn btn--primary btn--large u-fullwidth">Email Me</a>
+          </div>
+          <div class="column xl-6 tab-12">                    
+            <a href="images/resume-yegor_y.pdf" target="_blank" class="btn btn--stroke btn--large u-fullwidth">Get My Resume</a>
+          </div>
+        </div>
+        <!-- end section-footer__buttons -->              
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>© Copyright Hudson 2023</span> 
+              <span>Design by StyleShout</a> Distribution by ThemeWagon</a></span>
+            </p>
+          </div>
+        </div>
+        <!-- end section-footer__bottom -->          
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>
+            </svg>
+          </a>
+          <span>Back To Top</span>   
+        </div>
+        <!-- end ss-go-top -->
+      </footer>
+      <!-- end s-footer -->
+      <!-- end s-works -->
+    </div>
+    <!-- end page-wrap -->
+    <!-- Java Script
+      ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -1,119 +1,204 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-   <head>
-      <!--- basic page needs
-         ================================================== -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Yegor Yeryomenko</title>
-      <script>
-         document.documentElement.classList.remove('no-js');
-         document.documentElement.classList.add('js');
-      </script>
-      <!-- CSS
-         ================================================== -->
-      <link rel="stylesheet" href="css/vendor.css">
-      <link rel="stylesheet" href="css/styles.css">
-      <!-- favicons
-         ================================================== -->
-      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon.png">
-      <!-- Updated link -->
-      <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon.png">
-      <!-- Updated link -->
-      <link rel="manifest" href="site.webmanifest">
-   </head>
-   <body id="top">
-      <!-- preloader
-         ================================================== -->
-      <div id="preloader">
-         <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
+  <head>
+    <!--- basic page needs
+      ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yegor Yeryomenko</title>
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
+    <!-- CSS
+      ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- favicons
+      ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon.png">
+    <!-- Updated link -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon.png">
+    <!-- Updated link -->
+    <link rel="manifest" href="site.webmanifest">
+  </head>
+  <body id="top">
+    <!-- preloader
+      ================================================== -->
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <!-- page wrap
-         ================================================== -->
-      <div id="page" class="s-pagewrap">
+    </div>
+    <!-- page wrap
+      ================================================== -->
+    <div id="page" class="s-pagewrap">
       <!-- # site header 
-         ================================================== -->
-      <header class="s-header">
-         <div class="row s-header__inner">
-            <div class="s-header__block">
-               <div class="s-header__logo">
-                  <p class="logo-text">Yegor Y.</p>
-               </div>
-               <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+        ================================================== -->
+      <header class="s-header s-header-project">
+        <div class="row s-header__inner">
+          <div class="s-header__block">
+            <div class="s-header__logo">
+              <a href="index.html">
+                <p class="logo-text">Yegor Y.</p>
+              </a>
             </div>
-            <!-- end s-header__block -->
-            <nav class="s-header__nav">
-               <ul class="s-header__menu-links">
-                  <li>
-                     <a href="index.html#works">Back</a>
-                  </li>
-               </ul>
-               <!-- s-header__menu-links -->    
-            </nav>
-            <!-- end s-header__nav -->
-         </div>
-         <!-- end s-header__inner -->
+            <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+          </div>
+          <!-- end s-header__block -->
+          <nav class="s-header__nav">
+            <ul class="s-header__menu-links">
+              <li>
+                <a href="index.html#works">Back</a>
+              <li><a class="smoothscroll" href="#footer">Contact</a></li>
+              <li><a href="images/resume-yegor_y.pdf" target="_blank">My Resume</a></li>
+              </li>
+            </ul>
+            <!-- s-header__menu-links -->    
+          </nav>
+          <!-- end s-header__nav -->
+        </div>
+        <!-- end s-header__inner -->
       </header>
       <!-- end s-header -->
       <!-- Project Section
-         ================================================== -->
+        ================================================== -->
       <section id="works" class="s-works" style="padding-top: 60px;">
-      <div class="row">
-      <div class="column">
-         <h3>Projects | Sentiment Analysis using Haskell</h3>
-         <a href="https://github.com/yegory/NaiveBayes">
-         Project Link
-         </a>
-         <br><br>
-         <p>
-            Our Sentiment Analysis project utilizes a Naive Bayes classifier implemented in pure Haskell, designed to classify movie reviews as either positive or negative. This application allows users to train the model on their own data and make predictions based on user input. We leveraged Haskell's powerful type system and functional programming capabilities to ensure robust and maintainable code.
+        <div class="row">
+          <div class="column">
+            <h3>Projects | Sentiment Analysis using Haskell</h3>
+            <a href="https://github.com/yegory/NaiveBayes">Project Link</a>
             <br><br>
-            The application includes a command-line interface (CLI) that provides a user-friendly way for users to input their reviews and receive predictions. We performed extensive data preprocessing, which involved cleaning the text data by removing stop words, symbols, and punctuation. The model was trained and validated using a publicly available dataset—the IMDb dataset, which contains 25,000 positive and 25,000 negative movie reviews—ensuring a solid foundation for sentiment classification. The user can also use any other dataset, provided it is formatted correctly as a text file in the designated datasets directory.
-         </p>
-         <section>
-            <h4>Questions Addressed</h4>
-            <ul>
-               <li><strong>How can I effectively implement a Naive Bayes classifier in Haskell for text classification?</strong><br>
-                  This question focuses on applying Bayes' theorem to develop a probabilistic model for sentiment analysis, ensuring accurate predictions based on prior beliefs and observed evidence.
-               </li>
-               <li><strong>What preprocessing steps are necessary to prepare text data for analysis in a machine learning context?</strong><br>
-                  This question explores the importance of data cleaning techniques, including removing noise and irrelevant information, to enhance model accuracy.
-               </li>
-               <li><strong>How do I implement a command-line interface that facilitates user interaction with a machine learning model?</strong><br>
-            </ul>
-         </section>
-         <section>
-            <h4>Technical Specifications</h4>
-            <ol>
-               <li><strong>Benefits</strong>: The ability to classify movie reviews simplifies the process of understanding audience sentiment and can be valuable for filmmakers and marketers.</li>
-               <li><strong>Functionality</strong>: The application provides capabilities for training, validating, and using a sentiment analysis model, with results based on user input.</li>
-               <li><strong>Technology Stack</strong>: Pure Haskell, leveraging its functional programming features and strong typing for reliable application development.</li>
-            </ol>
-         </section>
-         <section>
-            <h4>Implementation Details</h4>
-            <ol>
-               <li><strong>Algorithm Overview</strong>: Utilizing Bayes' theorem, the Naive Bayes classifier calculates probabilities based on the occurrence of words in the reviews.</li>
-               <li><strong>Model Training</strong>: The model supports randomized data selection techniques for both training and testing, allowing the saving of the model's state for future predictions.</li>
-               <li><strong>Command-Line Interface</strong>: The CLI facilitates user interactions, allowing users to train models, validate them, and make predictions using simple commands.</li>
-            </ol>
-         </section>
-         <section>
-            <h4>Learning Outcomes</h4>
             <p>
-               Through the development of this project, we gained practical experience in writing Haskell applications and managing Cabal projects. We deepened our understanding of Input/Output operations and explored various data structures (like Map and Set) and their functionalities. Debugging Haskell's cryptic compile errors also became more intuitive. We became adept at file handling, reading data to and from files, and implementing machine learning algorithms in Haskell, demonstrating the potential of functional programming in data science.
+              Our Sentiment Analysis project utilizes a Naive Bayes classifier implemented in pure Haskell, designed to classify movie reviews as either positive or negative. This application allows users to train the model on their own data and make predictions based on user input. We leveraged Haskell's powerful type system and functional programming capabilities to ensure robust and maintainable code.
+              <br><br>
+              The application includes a command-line interface (CLI) that provides a user-friendly way for users to input their reviews and receive predictions. We performed extensive data preprocessing, which involved cleaning the text data by removing stop words, symbols, and punctuation. The model was trained and validated using a publicly available dataset—the IMDb dataset, which contains 25,000 positive and 25,000 negative movie reviews—ensuring a solid foundation for sentiment classification. The user can also use any other dataset, provided it is formatted correctly as a text file in the designated datasets directory.
             </p>
-         </section>
-      </div>
-      <!-- end page-wrap -->
-      <!-- Java Script
-         ================================================== -->
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
-   </body>
+            <section>
+              <h4>Questions Addressed</h4>
+              <ul>
+                <li><strong>How can I effectively implement a Naive Bayes classifier in Haskell for text classification?</strong><br>
+                  This question focuses on applying Bayes' theorem to develop a probabilistic model for sentiment analysis, ensuring accurate predictions based on prior beliefs and observed evidence.
+                </li>
+                <li><strong>What preprocessing steps are necessary to prepare text data for analysis in a machine learning context?</strong><br>
+                  This question explores the importance of data cleaning techniques, including removing noise and irrelevant information, to enhance model accuracy.
+                </li>
+                <li><strong>How do I implement a command-line interface that facilitates user interaction with a machine learning model?</strong><br>
+              </ul>
+            </section>
+            <section>
+              <h4>Technical Specifications</h4>
+              <ol>
+                <li><strong>Benefits</strong>: The ability to classify movie reviews simplifies the process of understanding audience sentiment and can be valuable for filmmakers and marketers.</li>
+                <li><strong>Functionality</strong>: The application provides capabilities for training, validating, and using a sentiment analysis model, with results based on user input.</li>
+                <li><strong>Technology Stack</strong>: Pure Haskell, leveraging its functional programming features and strong typing for reliable application development.</li>
+              </ol>
+            </section>
+            <section>
+              <h4>Implementation Details</h4>
+              <ol>
+                <li><strong>Algorithm Overview</strong>: Utilizing Bayes' theorem, the Naive Bayes classifier calculates probabilities based on the occurrence of words in the reviews.</li>
+                <li><strong>Model Training</strong>: The model supports randomized data selection techniques for both training and testing, allowing the saving of the model's state for future predictions.</li>
+                <li><strong>Command-Line Interface</strong>: The CLI facilitates user interactions, allowing users to train models, validate them, and make predictions using simple commands.</li>
+              </ol>
+            </section>
+            <section>
+              <h4>Learning Outcomes</h4>
+              <p>
+                Through the development of this project, we gained practical experience in writing Haskell applications and managing Cabal projects. We deepened our understanding of Input/Output operations and explored various data structures (like Map and Set) and their functionalities. Debugging Haskell's cryptic compile errors also became more intuitive. We became adept at file handling, reading data to and from files, and implementing machine learning algorithms in Haskell, demonstrating the potential of functional programming in data science.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section id="works" class="s-works" style="padding-top: 60px;">
+        <div class="row">
+          <div class="column xl-6 tab-12">
+            <a href="ubc-room-course-explorer.html"class="btn btn--primary btn--large u-fullwidth">Previous Project</a>
+          </div>
+          <div class="column xl-6 tab-12">
+            <a href="index.html#works" class="btn btn--large u-fullwidth">Return Home</a>
+          </div>
+        </div>
+      </section>
+      <!-- # footer 
+        ================================================== -->
+      <footer id="footer" class="s-footer target-section">
+        <div class="row">
+          <div class="column lg-12">
+            <div class="section-header light-on-dark" data-num="03">
+              <h2 class="text-display-title">Get In Touch</h2>
+            </div>
+            <!-- end section-header -->
+          </div>
+        </div>
+        <div class="row s-footer__content">
+          <div class="column xl-6 md-12 s-footer__block s-footer__about">
+            <p class="attention-getter">
+              I am passionate about programming and solving complex tasks. I look forward to growing professionally along with like-minded individuals at your team.
+            </p>
+          </div>
+          <!-- end section-footer__about -->
+          <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+            <div class="row">
+              <div class="column xl-4 lg-5 md-6 tab-12">
+                <h5>Connect</h5>
+                <ul class="link-list">
+                  <li><a href="https://www.linkedin.com/in/yegory/" target="_blank">LinkedIn</a></li>
+                </ul>
+                <ul class="link-list">
+                  <li><a href="https://github.com/yegory" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+              <div class="column xl-6 md-6 tab-12">
+                <h5>Contact Me</h5>
+                <ul class="link-list">
+                  <li>yeryomenko.y@gmail.com</li>
+                  <!-- <li><a href="tel:+1111111111">+111 111 1111</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- end section-footer__site-links -->
+        </div>
+        <!-- end section-footer__content -->
+        <div class="row s-footer__buttons">
+          <div class="column xl-6 tab-12">
+            <a href="mailto:yeryomenko.y@gmail.com" class="btn btn--primary btn--large u-fullwidth">Email Me</a>
+          </div>
+          <div class="column xl-6 tab-12">                    
+            <a href="images/resume-yegor_y.pdf" target="_blank" class="btn btn--stroke btn--large u-fullwidth">Get My Resume</a>
+          </div>
+        </div>
+        <!-- end section-footer__buttons -->              
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>© Copyright Hudson 2023</span> 
+              <span>Design by StyleShout</a> Distribution by ThemeWagon</a></span>
+            </p>
+          </div>
+        </div>
+        <!-- end section-footer__bottom -->          
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>
+            </svg>
+          </a>
+          <span>Back To Top</span>   
+        </div>
+        <!-- end ss-go-top -->
+      </footer>
+      <!-- end s-footer -->
+    </div>
+    <!-- end page-wrap -->
+    <!-- Java Script
+      ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

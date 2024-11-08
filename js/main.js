@@ -311,4 +311,105 @@
 
     })();
 
+    // Collapsible text for TA experience
+    document.getElementById("taLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        var content = document.getElementById("taDetails");
+        var linkText = document.getElementById("taLink"); // Get the link text element
+
+        if (content.style.maxHeight) {
+            // Close the collapsible
+            content.style.maxHeight = null;
+            content.classList.remove("active"); // Remove active class for transition
+            linkText.textContent = "More Details"; // Change text to "More Details"
+        } else {
+            // Open the collapsible
+            content.style.maxHeight = content.scrollHeight + "px"; // Set maxHeight to scrollHeight
+            content.classList.add("active"); // Add active class for transition
+            linkText.textContent = "Less Details"; // Change text to "Less Details"
+            content.classList.add("flash"); // Add flash effect
+
+            // Remove the flash class after the animation is complete
+            setTimeout(() => {
+                content.classList.remove("flash");
+            }, 500);
+        }
+    });
+
+    // Collapsible text for summary
+    document.getElementById("summaryLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        var content = document.getElementById("summaryDetails");
+        var linkText = document.getElementById("summaryLink"); // Get the link text element
+
+        if (content.style.maxHeight) {
+            // Close the collapsible
+            content.style.maxHeight = null;
+            content.classList.remove("active"); // Remove active class for transition
+            linkText.textContent = "More Details"; // Change text to "More Details"
+        } else {
+            // Open the collapsible
+            content.style.maxHeight = content.scrollHeight + "px"; // Set maxHeight to scrollHeight
+            content.classList.add("active"); // Add active class for transition
+            linkText.textContent = "Less Details"; // Change text to "Less Details"
+            content.classList.add("flash"); // Add flash effect
+
+            // Remove the flash class after the animation is complete
+            setTimeout(() => {
+                content.classList.remove("flash");
+            }, 500);
+        }
+    });
+
+    // Button stroke update based on window width
+    document.addEventListener('DOMContentLoaded', function() {
+        const summaryBtn = document.querySelector('.btn-summary');
+
+        function updateButtonClass() {
+            if (window.innerWidth > 1080) {
+                summaryBtn.classList.remove('btn--stroke');
+            } else {
+                summaryBtn.classList.add('btn--stroke');
+            }
+        }
+
+        updateButtonClass();
+        window.addEventListener('resize', updateButtonClass);
+    });
+
+    // Download button stroke update based on window width
+    document.addEventListener('DOMContentLoaded', function() {
+        const downloadBtn = document.querySelector('.btn-download');
+
+        function updateButtonClass() {
+            if (window.innerWidth <= 1080) {
+                downloadBtn.classList.remove('btn--stroke');
+            } else {
+                downloadBtn.classList.add('btn--stroke');
+            }
+        }
+
+        updateButtonClass();
+        window.addEventListener('resize', updateButtonClass);
+    });
+
+    // Download button position update based on window width
+    document.addEventListener('DOMContentLoaded', function() {
+        const downloadBtn = document.querySelector('.s-intro__btn-download .btn-download');
+        const btnsContainer = document.querySelector('.s-intro__content-btns');
+
+        function updateButtonPosition() {
+            if (window.innerWidth <= 1080) {
+                btnsContainer.appendChild(downloadBtn);
+            } else {
+                const btnDownloadWrapper = document.querySelector('.s-intro__btn-download');
+                btnDownloadWrapper.appendChild(downloadBtn);
+            }
+        }
+
+        updateButtonPosition();
+        window.addEventListener('resize', updateButtonPosition);
+    });
+
+
 })(document.documentElement);

@@ -1,127 +1,212 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-   <head>
-      <!--- basic page needs
-         ================================================== -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Yegor Yeryomenko</title>
-      <script>
-         document.documentElement.classList.remove('no-js');
-         document.documentElement.classList.add('js');
-      </script>
-      <!-- CSS
-         ================================================== -->
-      <link rel="stylesheet" href="css/vendor.css">
-      <link rel="stylesheet" href="css/styles.css">
-      <!-- favicons
-         ================================================== -->
-      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon.png">
-      <!-- Updated link -->
-      <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon.png">
-      <!-- Updated link -->
-      <link rel="manifest" href="site.webmanifest">
-   </head>
-   <body id="top">
-      <!-- preloader
-         ================================================== -->
-      <div id="preloader">
-         <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
+  <head>
+    <!--- basic page needs
+      ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yegor Yeryomenko</title>
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
+    <!-- CSS
+      ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- favicons
+      ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon.png">
+    <!-- Updated link -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon.png">
+    <!-- Updated link -->
+    <link rel="manifest" href="site.webmanifest">
+  </head>
+  <body id="top">
+    <!-- preloader
+      ================================================== -->
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <!-- page wrap
-         ================================================== -->
-      <div id="page" class="s-pagewrap">
-         <!-- # site header 
-            ================================================== -->
-         <header class="s-header">
-            <div class="row s-header__inner">
-               <div class="s-header__block">
-                  <div class="s-header__logo">
-                     <p class="logo-text">Yegor Y.</p>
-                  </div>
-                  <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-               </div>
-               <!-- end s-header__block -->
-               <nav class="s-header__nav">
-                  <ul class="s-header__menu-links">
-                     <li>
-                        <a href="index.html#works">Back</a>
-                     </li>
-                  </ul>
-                  <!-- s-header__menu-links -->    
-               </nav>
-               <!-- end s-header__nav -->
+    </div>
+    <!-- page wrap
+      ================================================== -->
+    <div id="page" class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header s-header-project">
+        <div class="row s-header__inner">
+          <div class="s-header__block">
+            <div class="s-header__logo">
+              <a href="index.html">
+                <p class="logo-text">Yegor Y.</p>
+              </a>
             </div>
-            <!-- end s-header__inner -->
-         </header>
-         <!-- end s-header -->
-         <!-- Project Section
-            ================================================== -->
-         <section id="works" class="s-works" style="padding-top: 60px;">
-         <div class="row">
-            <div class="column">
-               <h3>Projects | Formula 1 Database Management System</h3>
-               Project files available upon request - <a href="/images/Implemented Queries.pdf" target="_blank">
-               Queries Implemented
-               </a>
-               <br>
-               <br>
-               <p> 
-                  The Formula 1 Racing Database Application is designed to support users interested in betting on Formula 1 races by providing essential data on athletes, teams, and race history. It includes information on individual athletes, their teams, car specifications, track times, and past race results. Users can navigate this data, compare performance, and access historical race information to inform their betting decisions. The relational database structure supports complex queries, ensuring data consistency and meaningful insights.
-                  <br><br>
-                  The application features a Java Swing GUI that allows users to interact with the database effectively, enabling them to view detailed information, update records, and perform queries. Built using Java with JDBC and Oracle Database, the application prioritizes reliability and scalability. It includes referential integrity and well-defined data constraints to maintain data quality, making it a useful tool for Formula 1 enthusiasts and betting professionals.
-               </p>
-               <section>
-                  <h4>Questions Addressed</h4>
-                  <ul>
-                     <li><strong>How can I create and execute custom SQL queries using JDBC to retrieve specific athlete and race information?</strong><br>
-                        This question focuses on learning how to construct and execute various SQL queries to extract relevant data from the database, allowing users to search for and compare athlete statistics effectively.
-                     </li>
-                     <li><strong>What techniques can be employed to ensure data integrity and enforce referential constraints in an Oracle Database when using JDBC?</strong><br>
-                        This question explores the implementation of data integrity measures, such as setting up foreign key relationships and constraints within the database schema, ensuring consistent and reliable data throughout the application.
-                     </li>
-                     <li><strong>How do I implement CRUD (Create, Read, Update, Delete) operations in a Java Swing GUI using JDBC to manage the Formula 1 racing data?</strong><br>
-                        This question addresses the development of a user-friendly interface that allows users to interact with the database, enabling them to add, modify, or remove data while ensuring seamless communication between the GUI and the underlying database.
-                     </li>
-                  </ul>
-               </section>
-               <section>
-                  <h4>Database Specification</h4>
+            <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+          </div>
+          <!-- end s-header__block -->
+          <nav class="s-header__nav">
+            <ul class="s-header__menu-links">
+              <li><a href="index.html#works">Back</a></li>
+              <li><a class="smoothscroll" href="#footer">Contact</a></li>
+              <li><a href="images/resume-yegor_y.pdf" target="_blank">My Resume</a></li>
+            </ul>
+            <!-- s-header__menu-links -->    
+          </nav>
+          <!-- end s-header__nav -->
+        </div>
+        <!-- end s-header__inner -->
+      </header>
+      <!-- end s-header -->
+      <!-- Project Section
+        ================================================== -->
+      <section id="works" class="s-works" style="padding-top: 60px;">
+      <div class="row">
+        <div class="column">
+          <h3>Projects | Formula 1 Database Management System</h3>
+          Project files available upon request - <a href="/images/Implemented Queries.pdf" target="_blank">
+          Queries Implemented
+          </a>
+          <br>
+          <br>
+          <p> 
+            The Formula 1 Racing Database Application is designed to support users interested in betting on Formula 1 races by providing essential data on athletes, teams, and race history. It includes information on individual athletes, their teams, car specifications, track times, and past race results. Users can navigate this data, compare performance, and access historical race information to inform their betting decisions. The relational database structure supports complex queries, ensuring data consistency and meaningful insights.
+            <br><br>
+            The application features a Java Swing GUI that allows users to interact with the database effectively, enabling them to view detailed information, update records, and perform queries. Built using Java with JDBC and Oracle Database, the application prioritizes reliability and scalability. It includes referential integrity and well-defined data constraints to maintain data quality, making it a useful tool for Formula 1 enthusiasts and betting professionals.
+          </p>
+          <section>
+            <h4>Questions Addressed</h4>
+            <ul>
+              <li><strong>How can I create and execute custom SQL queries using JDBC to retrieve specific athlete and race information?</strong><br>
+                This question focuses on learning how to construct and execute various SQL queries to extract relevant data from the database, allowing users to search for and compare athlete statistics effectively.
+              </li>
+              <li><strong>What techniques can be employed to ensure data integrity and enforce referential constraints in an Oracle Database when using JDBC?</strong><br>
+                This question explores the implementation of data integrity measures, such as setting up foreign key relationships and constraints within the database schema, ensuring consistent and reliable data throughout the application.
+              </li>
+              <li><strong>How do I implement CRUD (Create, Read, Update, Delete) operations in a Java Swing GUI using JDBC to manage the Formula 1 racing data?</strong><br>
+                This question addresses the development of a user-friendly interface that allows users to interact with the database, enabling them to add, modify, or remove data while ensuring seamless communication between the GUI and the underlying database.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Database Specification</h4>
+            <ol>
+              <li><strong>Benefits</strong>: Storing information in a relational database simplifies retrieval, making it easy for users to find relevant data about athletes and races.</li>
+              <li><strong>Functionality</strong>: Tracks information related to Formula 1 racing, such as car details, sponsorships, and race outcomes. Users can view, insert, update, and delete data via a Java Swing-based GUI.</li>
+              <li><strong>Technology Stack</strong>: Java (JDBC) and Oracle Database.</li>
+            </ol>
+            </li>
+            <section>
+              <h4>Implementation Details</h4>
+              <ol>
+                <li><strong>ER Diagram</strong>: Models entities like athletes, teams, races, and sponsors.</li>
+                <li><strong>SQL Script</strong>: The <code>F1_DBscript.sql</code> script can be run independently on student servers or within IntelliJ IDEA Ultimate to create and populate the database.</li>
+                <li>
+                  <strong>Schema Changes</strong>:
                   <ol>
-                     <li><strong>Benefits</strong>: Storing information in a relational database simplifies retrieval, making it easy for users to find relevant data about athletes and races.</li>
-                     <li><strong>Functionality</strong>: Tracks information related to Formula 1 racing, such as car details, sponsorships, and race outcomes. Users can view, insert, update, and delete data via a Java Swing-based GUI.</li>
-                     <li><strong>Technology Stack</strong>: Java (JDBC) and Oracle Database.</li>
+                    <li>Changed data type for <code>time</code> from <code>TIME</code> to <code>FLOAT</code> due to Oracle limitations.</li>
+                    <li>Added constraints for referential integrity (e.g., foreign key dependencies).</li>
+                    <li>Removed some total participation requirements and used alternative methods for constraints, as Oracle does not support certain required assertions.</li>
                   </ol>
-                  </li>
-                  <section>
-                     <h4>Implementation Details</h4>
-                     <ol>
-                        <li><strong>ER Diagram</strong>: Models entities like athletes, teams, races, and sponsors.</li>
-                        <li><strong>SQL Script</strong>: The <code>F1_DBscript.sql</code> script can be run independently on student servers or within IntelliJ IDEA Ultimate to create and populate the database.</li>
-                        <li>
-                           <strong>Schema Changes</strong>:
-                           <ol>
-                              <li>Changed data type for <code>time</code> from <code>TIME</code> to <code>FLOAT</code> due to Oracle limitations.</li>
-                              <li>Added constraints for referential integrity (e.g., foreign key dependencies).</li>
-                              <li>Removed some total participation requirements and used alternative methods for constraints, as Oracle does not support certain required assertions.</li>
-                           </ol>
-                        </li>
-                     </ol>
-                  </section>
-                  <img src="images/Formula1DB-ER-Diagram.png" alt="Entity-Relationship diagram for the Formula 1 DBMS Project" class="project-image">
-            </div>
-         </div>
-         </section> <!-- end s-works -->
+                </li>
+              </ol>
+            </section>
+            <img src="images/Formula1DB-ER-Diagram.png" alt="Entity-Relationship diagram for the Formula 1 DBMS Project" class="project-image">
+        </div>
       </div>
-      <!-- end page-wrap -->
-      <!-- Java Script
-         ================================================== -->
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
-   </body>
+      </section> <!-- end s-works -->
+      <section id="works" class="s-works" style="padding-top: 60px;">
+        <div class="row">
+          <div class="column xl-6 tab-12">
+            <!-- Second column with 2 buttons -->
+            <a href="ubc-room-course-explorer.html" class="btn btn--primary btn--large u-fullwidth">Next Project</a>
+            <a href="interval-timer-app.html"class="btn btn--large u-fullwidth">Previous Project</a>
+          </div>
+          <div class="column xl-6 tab-12">
+            <!-- First column with 1 button -->
+            <a href="index.html#works" class="btn btn--large u-fullwidth">Return Home</a>
+          </div>
+        </div>
+      </section>
+      <!-- # footer 
+        ================================================== -->
+      <footer id="footer" class="s-footer target-section">
+        <div class="row">
+          <div class="column lg-12">
+            <div class="section-header light-on-dark" data-num="03">
+              <h2 class="text-display-title">Get In Touch</h2>
+            </div>
+            <!-- end section-header -->
+          </div>
+        </div>
+        <div class="row s-footer__content">
+          <div class="column xl-6 md-12 s-footer__block s-footer__about">
+            <p class="attention-getter">
+              I am passionate about programming and solving complex tasks. I look forward to growing professionally along with like-minded individuals at your team.
+            </p>
+          </div>
+          <!-- end section-footer__about -->
+          <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+            <div class="row">
+              <div class="column xl-4 lg-5 md-6 tab-12">
+                <h5>Connect</h5>
+                <ul class="link-list">
+                  <li><a href="https://www.linkedin.com/in/yegory/" target="_blank">LinkedIn</a></li>
+                </ul>
+                <ul class="link-list">
+                  <li><a href="https://github.com/yegory" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+              <div class="column xl-6 md-6 tab-12">
+                <h5>Contact Me</h5>
+                <ul class="link-list">
+                  <li>yeryomenko.y@gmail.com</li>
+                  <!-- <li><a href="tel:+1111111111">+111 111 1111</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- end section-footer__site-links -->
+        </div>
+        <!-- end section-footer__content -->
+        <div class="row s-footer__buttons">
+          <div class="column xl-6 tab-12">
+            <a href="mailto:yeryomenko.y@gmail.com" class="btn btn--primary btn--large u-fullwidth">Email Me</a>
+          </div>
+          <div class="column xl-6 tab-12">                    
+            <a href="images/resume-yegor_y.pdf" target="_blank" class="btn btn--stroke btn--large u-fullwidth">Get My Resume</a>
+          </div>
+        </div>
+        <!-- end section-footer__buttons -->              
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>© Copyright Hudson 2023</span> 
+              <span>Design by StyleShout</a> Distribution by ThemeWagon</a></span>
+            </p>
+          </div>
+        </div>
+        <!-- end section-footer__bottom -->          
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>
+            </svg>
+          </a>
+          <span>Back To Top</span>   
+        </div>
+        <!-- end ss-go-top -->
+      </footer>
+      <!-- end s-footer -->
+    </div>
+    <!-- end page-wrap -->
+    <!-- Java Script
+      ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

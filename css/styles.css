@@ -3056,6 +3056,10 @@ td:last-child {
     left            : 0;
 }
 
+.s-header-project {
+    position        : fixed;
+}
+
 .s-header.offset {
     transform          : translateY(-100%);
     transition-property: transform, background-color;

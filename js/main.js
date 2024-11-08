@@ -411,5 +411,22 @@
         window.addEventListener('resize', updateButtonPosition);
     });
 
+    const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+    if (!isDevelopment) {
+        document.querySelectorAll('a').forEach(link => {
+            let href = link.getAttribute('href');
+            
+            if (href) {
+                if (href === 'index.html') {
+                    link.setAttribute('href', '/');
+                } 
+                else if (href.endsWith('.html')) {
+                    link.setAttribute('href', `https://yegory.github.io/${href}`);
+                }
+            }
+        });
+    }
+
 
 })(document.documentElement);

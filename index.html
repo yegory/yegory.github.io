@@ -1,340 +1,630 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" >
+<html lang="en">
   <head>
-    <!--- basic page needs
-      ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yegor Yeryomenko</title>
-    <script>
-      document.documentElement.classList.remove('no-js');
-      document.documentElement.classList.add('js');
-    </script>
-    <!-- CSS
-      ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- favicons
-      ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon.png">
-    <!-- Updated link -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon.png">
-    <!-- Updated link -->
-    <link rel="manifest" href="site.webmanifest">
+    <meta name="description" content="Yegor Yeryomenko - software developer in Vancouver building SaaS platforms, REST APIs, data migration systems, and analytics pipelines.">
+    <meta name="theme-color" content="#151610">
+    <meta property="og:title" content="Yegor Yeryomenko | Software Developer">
+    <meta property="og:description" content="Software developer focused on SaaS platforms, APIs, data systems, and thoughtful user experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/intro-bg.jpg">
+    <title>Yegor Yeryomenko | Software Developer</title>
+    <link rel="icon" type="image/png" href="assets/icons/icon.png">
+    <link rel="apple-touch-icon" href="assets/icons/icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/styles.css?v=20260427j">
+    <script src="js/main.js?v=20260427j" defer></script>
   </head>
-  <body id="top">
-    <!-- preloader
-      ================================================== -->
-    <div id="preloader">
-      <div id="loader" class="dots-fade">
-        <div></div>
-        <div></div>
-        <div></div>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="brand" href="#top" aria-label="Yegor Yeryomenko home">
+          <span class="brand__mark">
+            <img src="assets/icons/icon.png" alt="">
+          </span>
+          <span class="brand__text">Yegor Y.</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-nav>
+          <a class="nav-top-link" href="#top">Back to Top</a>
+          <a href="#profile">Profile</a>
+          <a href="#experience">Experience</a>
+          <a href="#stack">Stack</a>
+          <a href="#projects">Projects</a>
+          <a href="#notes">Notes</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-resume" href="assets/docs/resume-yegor-yeryomenko.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </nav>
       </div>
-    </div>
-    <!-- page wrap
-      ================================================== -->
-    <div id="page" class="s-pagewrap">
-      <!-- # site header 
-        ================================================== -->
-      <header class="s-header">
-        <div class="row s-header__inner">
-          <div class="s-header__block">
-            <div class="s-header__logo">
-              <p class="logo-text">Yegor Y.</p>
-            </div>
-            <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title" data-nav-theme="hero">
+        <div class="hero__image" aria-hidden="true">
+          <picture>
+            <source media="(min-width: 1800px)" srcset="assets/images/intro-bg-wide.jpg">
+            <img src="assets/images/intro-bg.jpg" alt="">
+          </picture>
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__grid" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="eyebrow reveal reveal-fast">Vancouver, BC - Software Developer</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="line-mask"><span><span class="hero__title-muted">Hi, I'm</span></span></span>
+            <span class="line-mask"><span class="hero__title-name">Yegor Yeryomenko.</span></span>
+            <span class="line-mask"><span class="hero__title-subline"><span class="hero__title-muted">Full-stack</span> <span class="hero__title-strong">developer</span></span></span>
+            <span class="line-mask"><span class="hero__title-subline"><span class="hero__title-muted">building</span> <span class="hero__title-strong">reliable</span> <span class="hero__title-muted">products.</span></span></span>
+          </h1>
+          <p class="hero__lede reveal">
+            I develop SaaS platforms, secure REST APIs, data migration systems, reporting dashboards, and event-driven integrations. I am a UBC Computer Science graduate with Distinction and a hands-on builder across backend, data, mobile, and frontend work.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="button button--primary" href="#projects">View projects</a>
+            <a class="button button--ghost" href="mailto:yeryomenko.y@gmail.com">Email me</a>
           </div>
-          <!-- end s-header__block -->
-          <nav class="s-header__nav">
-            <ul class="s-header__menu-links">
-              <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-              <li><a class="smoothscroll" href="#about">Summary</a></li>
-              <li><a class="smoothscroll" href="#works">Key Projects</a></li>
-              <li><a class="smoothscroll" href="#footer">Contact</a></li>
-              <li><a href="images/resume-yegor_y.pdf" target="_blank">My Resume</a></li>
+          <dl class="hero__metrics reveal">
+            <div>
+              <dt>Current role</dt>
+              <dd>OlaTech Software Developer</dd>
+            </div>
+            <div>
+              <dt>Education</dt>
+              <dd>UBC B.Sc. with Distinction</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open to relocate across Canada</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="tech-marquee" aria-hidden="true">
+          <div class="tech-marquee__viewport">
+            <div class="tech-marquee__track">
+              <div class="tech-marquee__group">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>REST APIs</span>
+                <span>Kafka</span>
+                <span>React</span>
+                <span>SwiftUI</span>
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>AWS</span>
+                <span>SQL</span>
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>REST APIs</span>
+                <span>Kafka</span>
+                <span>React</span>
+                <span>SwiftUI</span>
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>AWS</span>
+                <span>SQL</span>
+              </div>
+              <div class="tech-marquee__group">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>REST APIs</span>
+                <span>Kafka</span>
+                <span>React</span>
+                <span>SwiftUI</span>
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>AWS</span>
+                <span>SQL</span>
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>REST APIs</span>
+                <span>Kafka</span>
+                <span>React</span>
+                <span>SwiftUI</span>
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>AWS</span>
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="profile" class="section section--light profile" data-nav-theme="light">
+        <div class="section__header reveal">
+          <p class="eyebrow">Profile</p>
+          <h2>About me.</h2>
+        </div>
+        <div class="profile__body">
+          <div class="profile__copy reveal">
+            <p>
+              I am from Kazakhstan and now live in Vancouver, Canada. My work sits at the intersection of practical engineering and clear product outcomes: shipping features, making complex data move safely, and turning backend systems into useful experiences.
+            </p>
+            <p>
+              I am fluent in English and Russian, and international experience across Kazakhstan, the UAE, Turkey, and Canada has made me adaptable in new teams and environments.
+            </p>
+          </div>
+          <div class="capability-grid">
+            <article class="capability reveal">
+              <span>01</span>
+              <h3>Backend systems</h3>
+              <p>REST APIs, authentication, data modeling, migrations, integrations, testing, and service reliability.</p>
+            </article>
+            <article class="capability reveal">
+              <span>02</span>
+              <h3>Data and analytics</h3>
+              <p>Reporting dashboards, event-driven pipelines, SQL, Python analysis, and machine learning foundations.</p>
+            </article>
+            <article class="capability reveal">
+              <span>03</span>
+              <h3>User-facing products</h3>
+              <p>SwiftUI apps, React interfaces, polished interaction flows, and feature work from idea to shipped state.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section--ink experience" data-nav-theme="dark">
+        <div class="section__header reveal">
+          <p class="eyebrow">Professional Path</p>
+          <h2 class="section__title--wide">Where I have built, taught, and kept growing.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__date">Jan 2025 - Present</div>
+            <div class="timeline__content">
+              <p class="timeline__kicker">Remote</p>
+              <h3>Software Developer</h3>
+              <p class="timeline__company">OlaTech Corporation</p>
+              <ul>
+                <li>Built and enhanced a large-scale SaaS platform for associations across membership management, workflows, reporting, and communications.</li>
+                <li>Designed a data migration framework for complex, interdependent entities moving across environments with high reliability.</li>
+                <li>Developed secure, scalable REST APIs powering mobile authentication, messaging, and user data workflows.</li>
+                <li>Delivered analytics dashboards and data pipelines connecting external systems through microservices and Kafka.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item timeline__item--milestone reveal">
+            <div class="timeline__date">Sept. 2020 - May 2024</div>
+            <div class="timeline__content">
+              <p class="timeline__kicker">Graduation milestone</p>
+              <h3>B.Sc. in Computer Science, with Distinction</h3>
+              <p class="timeline__company">The University of British Columbia</p>
+              <p>Completed the Computer Science degree program in Vancouver after four years of technical coursework, project work, and applied software development.</p>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__date">May 2023 - Jun 2023</div>
+            <div class="timeline__content">
+              <p class="timeline__kicker">Vancouver, BC</p>
+              <h3>Teaching Assistant - Applied Machine Learning</h3>
+              <p class="timeline__company">The University of British Columbia</p>
+              <ul>
+                <li>Hosted post-lecture office hours, assessed student work, invigilated exams, and supported the student forum.</li>
+                <li>Helped students with Python, machine learning concepts, environment setup, debugging, and course-related technical blockers.</li>
+                <li>Strengthened communication by translating technical issues into practical explanations for students.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="stack" class="section section--light stack" data-nav-theme="light">
+        <div class="section__header reveal">
+          <p class="eyebrow">Technical Skills</p>
+          <h2>Tools and technologies I work with.</h2>
+        </div>
+
+        <div class="skill-groups reveal">
+          <article class="skill-group">
+            <span>01</span>
+            <h3>Languages</h3>
+            <ul>
+              <li>Java</li>
+              <li>Python</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Swift</li>
+              <li>SQL</li>
+              <li>C and C++</li>
+              <li>Haskell</li>
             </ul>
-            <!-- s-header__menu-links -->    
-          </nav>
-          <!-- end s-header__nav -->
+          </article>
+          <article class="skill-group">
+            <span>02</span>
+            <h3>Backend and Data</h3>
+            <ul>
+              <li>Spring Boot</li>
+              <li>REST APIs</li>
+              <li>Spring Data JPA</li>
+              <li>Kafka</li>
+              <li>MySQL</li>
+              <li>Oracle DB</li>
+              <li>JDBC</li>
+              <li>Data pipelines</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <span>03</span>
+            <h3>Frontend and Mobile</h3>
+            <ul>
+              <li>React</li>
+              <li>SwiftUI</li>
+              <li>Node.js</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Three.js</li>
+              <li>WebGL</li>
+              <li>Java Swing</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <span>04</span>
+            <h3>Tools and Cloud</h3>
+            <ul>
+              <li>Git</li>
+              <li>Gradle</li>
+              <li>Postman</li>
+              <li>AWS</li>
+              <li>Jenkins</li>
+              <li>Zabbix</li>
+              <li>JUnit</li>
+              <li>Mocha and Chai</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <span>05</span>
+            <h3>Practices</h3>
+            <ul>
+              <li>Data migration</li>
+              <li>Microservices</li>
+              <li>Authentication</li>
+              <li>Reporting dashboards</li>
+              <li>Test-driven development</li>
+              <li>Agile/Scrum</li>
+              <li>Machine learning</li>
+              <li>Product-minded delivery</li>
+            </ul>
+          </article>
         </div>
-        <!-- end s-header__inner -->
-      </header>
-      <!-- end s-header -->
-      <!-- # intro
-        ================================================== -->
-      <section id="intro" class="s-intro target-section">
-        <div class="row s-intro__content width-sixteen-col">
-          <div class="column lg-12 s-intro__content-inner grid-block grid-16">
-            <div class="s-intro__content-text">
-              <h1 class="s-intro__content-title">
-                Yegor Yeryomenko <br>
-                <span class="small-font">Experienced BSc in Computer Science</span>
-              </h1>
-              <div class="s-intro__content-btns">
-                <a class="smoothscroll btn btn--stroke btn-summary" href="#about">Summary</a>
-                <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
-              </div>
-              <!-- s-intro__content-btns -->   
+
+      </section>
+
+      <section id="projects" class="section section--muted projects" data-nav-theme="dark">
+        <div class="section__header reveal">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section__title--wide">Project work that shows how I think and build.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal" data-tilt>
+            <button class="project-card__hit" type="button" data-project-open="interval-timer" aria-label="Open Interval Timer App project details"></button>
+            <div class="project-card__media">
+              <img src="assets/images/interval-timer-app.png" alt="Three iPhone screens showing the Interval Timer app interface">
+              <span class="project-card__cue">View details</span>
             </div>
-            <!-- s-intro__content-text -->                     
-          </div>
-          <!-- s-intro__content-inner -->  
-        </div>
-        <!-- s-intro__content -->
-        <div class="s-intro__content-media">                               
-          <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
-        </div>
-        <!-- s-intro__content-media -->                
-        <div class="s-intro__btn-download">
-          <a class="btn btn--stroke btn-download" href="images/resume-yegor_y.pdf" target="_blank">
-          Get My CV
-          </a>
+            <div class="project-card__body">
+              <p class="project-card__type">iOS app</p>
+              <h3>Interval Timer App</h3>
+              <p>Custom workout timer built in SwiftUI with configurable sets, reps, rest durations, alert preferences, and preserved progress across sessions.</p>
+              <ul>
+                <li>Integrated concurrent timer and stopwatch behavior.</li>
+                <li>Added background sound alerts without disrupting other audio.</li>
+                <li>Designed a smooth mobile flow for workout setup and execution.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span>Swift</span>
+                <span>SwiftUI</span>
+                <span>UserDefaults</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tilt>
+            <button class="project-card__hit" type="button" data-project-open="formula1-dbms" aria-label="Open Formula 1 DBMS project details"></button>
+            <div class="project-card__media">
+              <img src="assets/images/formula1-dbms.png" alt="Entity relationship diagram for a Formula 1 database system">
+              <span class="project-card__cue">View details</span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__type">Database system</p>
+              <h3>Formula 1 DBMS</h3>
+              <p>Team-built Java Swing and Oracle DB prototype for managing Formula 1 athletes, teams, cars, sponsorships, race results, and historical performance.</p>
+              <ul>
+                <li>Formalized SQL DDL and contributed SQL DML commands.</li>
+                <li>Normalized the entity relationship design to 3NF.</li>
+                <li>Documented milestones and reached 96% of project requirements.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span>Java</span>
+                <span>JDBC</span>
+                <span>SQL</span>
+                <span>Oracle DB</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tilt>
+            <button class="project-card__hit" type="button" data-project-open="ubc-course-room-explorer" aria-label="Open UBC Course and Room Explorer project details"></button>
+            <div class="project-card__media">
+              <img src="assets/images/ubc-course-room-explorer.png" alt="Facade architecture diagram for the UBC Course and Room Explorer project">
+              <span class="project-card__cue">View details</span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__type">Backend query engine</p>
+              <h3>UBC Course and Room Explorer</h3>
+              <p>TypeScript and Node.js query application for extracting insights from dynamic JSON datasets, built iteratively against strict customer specifications.</p>
+              <ul>
+                <li>Designed app components in an Agile scrum workflow.</li>
+                <li>Built expressive Mocha and Chai tests for broad query behavior.</li>
+                <li>Implemented an efficient generic query approach for JSON data.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span>TypeScript</span>
+                <span>Node.js</span>
+                <span>Mocha.js</span>
+                <span>Chai.js</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tilt>
+            <button class="project-card__hit" type="button" data-project-open="sentiment-analysis" aria-label="Open Sentiment Analysis project details"></button>
+            <div class="project-card__media">
+              <img src="assets/images/sentiment-analysis.png" alt="Sentiment analysis project diagram with Haskell and Naive Bayes classification">
+              <span class="project-card__cue">View details</span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__type">Machine learning CLI</p>
+              <h3>Sentiment Analysis with Naive Bayes</h3>
+              <p>Pure Haskell command-line classifier that trains on review datasets, preprocesses text, saves model state, and predicts sentiment from user input.</p>
+              <ul>
+                <li>Performed preprocessing to remove noise and improve accuracy.</li>
+                <li>Created randomized data selection for training and testing.</li>
+                <li>Reached model accuracy above 85% on validation work.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span>Haskell</span>
+                <span>aeson JSON</span>
+                <span>CLI</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
-      <!-- end s-intro -->
-      <!-- # about
-        ================================================== -->
-      <section id="about" class="s-about target-section">
-        <div class="row s-about__content">
-          <div class="column xl-12">
-            <div class="section-header" data-num="01">
-              <h2 class="text-display-title">Summary</h2>
-            </div>
-            <!-- end section-header -->
-            <p class="attention-getter">
-              I am Yegor, 22 years old, from <strong>Kazakhstan</strong>. 
-              <br><br>
-              In May 2024, I completed my Bachelor’s degree in <strong>Computer Science</strong> at the <strong>University of British Columbia</strong> with <strong>Distinction</strong>. 
-              <br><br>
-              Currently, I reside in Vancouver, BC, Canada, and I hold a valid open Canadian work permit. 
-              <br><br>
-              I am actively seeking work, where my profile meets Employer's requirements.
-              <br>
-              <a href="#" id="summaryLink" class="collapsible">More details</a>
-            </p>
-            <div id="summaryDetails" class="collapsible-content">
-              <p class="attention-getter">
-                I'm fluent in both <strong>English</strong> and <strong>Russian</strong>, which have been useful in connecting with diverse people and cultures along the way.   
-                <br><br>
-                <strong>International living experiences</strong>, particularly in Kazakhstan, the UAE, Turkey, and Canada, have shaped my broader perspective and adaptability to new environments, which I value greatly.
-                <br><br>
-                Outside of academics, sports have played a significant role in my life. I have 2 years of both: <strong>soccer</strong> and <strong>boxing</strong>; together with 4 years total of <strong>gym</strong> and/or <strong>calisthenics</strong>. I’ve also played the flute and the alto saxophone.
-                <br><br>
-                I truly value building <strong>meaningful connections</strong>, as friendships have been an important part of my life, especially throughout my time in different countries.
-              </p>
-            </div>
-            <div class="grid-list-items s-about__blocks">
-              <div class="grid-list-items__item s-about__block">
-                <h4 class="s-about__block-title">Education</h4>
-                <ul class="s-about__list">
-                  <li>
-                    The University of British Columbia
-                    <span>Sep. 2020 - May 2024</span>
-                  </li>
-                </ul>
-                <h4 class="s-about__block-title">Experience</h4>
-                <ul class="s-about__list">
-                  <li>
-                    Applied ML Teaching Assistant
-                    <span>The University of British Columbia (2023)</span>
-                    <a href="#" id="taLink" class="collapsible">
-                    More details
-                    </a>
-                  </li>
-                </ul>
-                <div id="taDetails" class="collapsible-content">
-                  <p>
-                    As a teaching assistant for the <strong>CPSC 330: Applied Machine Learning</strong> course at UBC, I helped students understand machine learning concepts, provided guidance on projects and technical issues, and assisted in grading assignments and leading student discussion on Piazza. This role enhanced my communication skills and deepened my understanding of machine learning applications.
-                  </p>
-                </div>
-              </div>
-              <!--end s-about__block -->
-              <div class="grid-list-items__item s-about__block">
-                <h4 class="s-about__block-title">Awards</h4>
-                <ul class="s-about__list">
-                  <li>
-                    Dean's Honour List 
-                    <span>UBC 2020-21 (87% average grade)</span>
-                  </li>
-                  <li>
-                    High School Valedictorian
-                    <span>Necat British College — 2020</span>
-                    <a href="images/NBC_award.jpg" target="_blank" class="valedictorian">
-                    View Image
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!--end s-about__block -->
-              <div class="grid-list-items__item s-about__block">
-                <h4 class="s-about__block-title">Skills</h4>
-                <ul class="s-about__list">
-                  <li>Backend Development</li>
-                  <li>Test-Driven Development</li>
-                  <li>Data Analysis and ML</li>
-                  <li>Low-level programming and Optimization</li>
-                  <li>Consultation/Leading</li>
-                  <li>Frontend Development</li>
-                </ul>
-              </div>
-              <!--end s-about__block -->
-            </div>
-            <!-- grid-list-items -->
-          </div>
-          <!--end column -->
+
+      <section id="notes" class="section section--light education" aria-labelledby="education-title" data-nav-theme="light">
+        <div class="section__header reveal">
+          <p class="eyebrow">Notes</p>
+          <h2 id="education-title">Interests, languages, and practice.</h2>
         </div>
-        <!--end s-about__content -->
+        <div class="education-grid">
+          <article class="education-item reveal">
+            <span>Languages</span>
+            <h3>English and Russian</h3>
+            <p>Comfortable communicating with diverse teams, students, stakeholders, and international peers.</p>
+          </article>
+          <article class="education-item reveal">
+            <span>Background</span>
+            <h3>International perspective</h3>
+            <p>Life across Kazakhstan, the UAE, Turkey, and Canada shaped how I adapt, learn, and build relationships.</p>
+          </article>
+          <article class="education-item reveal">
+            <span>Interests</span>
+            <h3>Sports and calisthenics</h3>
+            <p>Training is a steady part of my routine, especially calisthenics, with past experience in soccer, boxing, and gym work.</p>
+            <button class="education-item__link education-item__button" type="button" data-video-modal-open>View Videos</button>
+          </article>
+          <article class="education-item reveal">
+            <span>Problem solving</span>
+            <h3>LeetCode practice</h3>
+            <p>I use algorithm practice to keep fundamentals sharp and build speed with problem decomposition.</p>
+            <a class="education-item__link" href="https://leetcode.com/u/yegorye/" target="_blank" rel="noreferrer">View LeetCode profile</a>
+          </article>
+        </div>
       </section>
-      <!-- end s-about -->  
-      <!-- # works
-        ================================================== -->
-      <section id="works" class="s-works target-section">
-        <div class="row">
-          <div class="column xl-12">
-            <div class="section-header" data-num="02">
-              <h2 class="text-display-title">Key Projects</h2>
-            </div>
-            <!-- end section-header -->
+    </main>
+
+    <div class="project-modal" data-project-modal hidden>
+      <div class="project-modal__overlay" data-modal-close aria-hidden="true"></div>
+      <section class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" aria-describedby="project-modal-summary">
+        <button class="project-modal__close" type="button" aria-label="Close project details" data-modal-close>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="project-modal__hero">
+          <img src="assets/images/interval-timer-app.png" alt="" data-modal-image>
+          <div class="project-modal__shade" aria-hidden="true"></div>
+          <div class="project-modal__pager" aria-label="Project navigation">
+            <button type="button" data-modal-prev aria-label="Open previous project">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+            </button>
+            <button type="button" data-modal-next aria-label="Open next project">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="project-modal__intro">
+            <p class="project-modal__type" data-modal-type></p>
+            <h2 id="project-modal-title" data-modal-title></h2>
+            <p id="project-modal-summary" class="project-modal__summary" data-modal-summary></p>
+            <div class="project-modal__links" data-modal-links></div>
           </div>
         </div>
-        <div class="row folio-entries">
-          <div class="column entry">
-            <a href="interval-timer-app" class="entry__link">
-              <div class="entry__info">
-                <h4 class="entry__title">Interval Timer App</h4>
-                <div class="entry__cat">iOS App using Swift and SwiftUI</div>
-                <br><br>
-              </div>
-              <div class="entry__thumb">
-                <img src="images/TimerIntervalAppPreview.png" srcset="images/TimerIntervalAppPreview.png 1x, images/TimerIntervalAppPreview.png@2x.jpg 2x" alt="">
-              </div>
-            </a>
-          </div>
-          <!-- entry 1 done -->
-          <!-- entry 2 - Formula 1 DB -->
-          <div class="column entry">
-            <a href="formula1-dbms" class="entry__link">
-              <div class="entry__info">
-                <h4 class="entry__title">Formula 1 Database System</h4>
-                <div class="entry__cat">DBMS system using Java, JDBC, and SQL</div>
-                <br>
-              </div>
-              <div class="entry__thumb">
-                <img src="images/Formula1DB-ER-Diagram.png" srcset="images/Formula1DB-ER-Diagram.png 1x, images/Formula1DB-ER-Diagram.png@2x.jpg 2x" alt="">
-              </div>
-            </a>
-          </div>
-          <!-- entry 2 done -->
-          <!-- entry 3 - UBC Course and Room Explorer -->
-          <div class="column entry">
-            <a href="ubc-room-course-explorer" class="entry__link">
-              <div class="entry__info">
-                <h4 class="entry__title">UBC Course and Room Explorer</h4>
-                <div class="entry__cat">Backend project using TypeScript, Node.js, Mocha.js, and Chai.js</div>
-                <br>
-              </div>
-              <br><br>
-              <div class="entry__thumb">
-                <img src="images/facade-ubc-explorer.png" srcset="images/facade-ubc-explorer.png 1x, images/facade-ubc-explorer.png@2x.jpg 2x" alt="">
-              </div>
-            </a>
-          </div>
-          <!-- entry 3 done -->
-          <!-- entry 4 - Sentiment Analysis with Naive Bayes -->
-          <div class="column entry">
-            <a href="sentiment-analysis" class="entry__link">
-              <div class="entry__info">
-                <h4 class="entry__title">Sentiment Analysis with Naive Bayes</h4>
-                <div class="entry__cat">Machine Learning project using Haskell, aeson JSON</div>
-                <br>
-              </div>
-              <div class="entry__thumb">
-                <img src="images/sentiment-analysis-project.png" srcset="images/sentiment-analysis-project.png 1x, sentiment-analysis-project.png@2x.jpg 2x" alt="">
-              </div>
-            </a>
-          </div>
-          <!-- entry 4 done -->
+        <div class="project-modal__thumbs" data-modal-thumbs></div>
+        <div class="project-modal__content">
+          <div class="project-modal__sections" data-modal-sections></div>
+          <div class="project-modal__tags" data-modal-tags></div>
         </div>
-        <!-- folio entries -->
       </section>
-      <!-- end s-works --> 
-      <!-- # footer 
-        ================================================== -->
-      <footer id="footer" class="s-footer target-section">
-        <div class="row">
-          <div class="column lg-12">
-            <div class="section-header light-on-dark" data-num="03">
-              <h2 class="text-display-title">Get In Touch</h2>
-            </div>
-            <!-- end section-header -->
-          </div>
-        </div>
-        <div class="row s-footer__content">
-          <div class="column xl-6 md-12 s-footer__block s-footer__about">
-            <p class="attention-getter">
-              I am passionate about programming and solving complex tasks. I look forward to growing professionally along with like-minded individuals at your team.
-            </p>
-          </div>
-          <!-- end section-footer__about -->
-          <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
-            <div class="row">
-              <div class="column xl-4 lg-5 md-6 tab-12">
-                <h5>Connect</h5>
-                <ul class="link-list">
-                  <li><a href="https://www.linkedin.com/in/yegory/" target="_blank">LinkedIn</a></li>
-                </ul>
-                <ul class="link-list">
-                  <li><a href="https://github.com/yegory" target="_blank">GitHub</a></li>
-                </ul>
-              </div>
-              <div class="column xl-6 md-6 tab-12">
-                <h5>Contact Me</h5>
-                <ul class="link-list">
-                  <li>yeryomenko.y@gmail.com</li>
-                  <!-- <li><a href="tel:+1111111111">+111 111 1111</a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- end section-footer__site-links -->
-        </div>
-        <!-- end section-footer__content -->
-        <div class="row s-footer__buttons">
-          <div class="column xl-6 tab-12">
-            <a href="mailto:yeryomenko.y@gmail.com" class="btn btn--primary btn--large u-fullwidth">Email Me</a>
-          </div>
-          <div class="column xl-6 tab-12">                    
-            <a href="images/resume-yegor_y.pdf" target="_blank" class="btn btn--stroke btn--large u-fullwidth">Get My Resume</a>
-          </div>
-        </div>
-        <!-- end section-footer__buttons -->              
-        <div class="row s-footer__bottom">
-          <div class="column xl-6 lg-12">
-            <p class="ss-copyright">
-              <span>© Copyright Hudson 2023</span> 
-              <span>Design by StyleShout</a> Distribution by ThemeWagon</a></span>
-            </p>
-          </div>
-        </div>
-        <!-- end section-footer__bottom -->          
-        <div class="ss-go-top">
-          <a class="smoothscroll" title="Back to Top" href="#top">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-              <path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path>
-            </svg>
-          </a>
-          <span>Back To Top</span>   
-        </div>
-        <!-- end ss-go-top -->
-      </footer>
-      <!-- end s-footer -->
     </div>
-    <!-- end page-wrap -->
-    <!-- Java Script
-      ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+
+    <div class="project-modal video-modal" data-video-modal hidden>
+      <div class="project-modal__overlay" data-video-modal-close aria-hidden="true"></div>
+      <section class="project-modal__dialog video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="video-modal-title" aria-describedby="video-modal-summary">
+        <button class="project-modal__close" type="button" aria-label="Close videos" data-video-modal-close>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="video-modal__body">
+          <div class="video-modal__stage">
+            <video class="video-modal__player" controls playsinline preload="metadata" data-video-player></video>
+          </div>
+          <div class="video-modal__details">
+            <p class="project-modal__type">Calisthenics</p>
+            <h2 id="video-modal-title" data-video-title></h2>
+            <p id="video-modal-summary" class="project-modal__summary" data-video-summary></p>
+            <div class="video-modal__thumbs" data-video-thumbs aria-label="Select calisthenics video"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer id="contact" class="footer" data-nav-theme="dark">
+      <div class="footer__inner">
+        <div class="footer__intro reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>
+            <span class="footer__heading-line">Open to thoughtful software</span>
+            <span class="footer__heading-line">work and product-minded teams.</span>
+          </h2>
+          <p>
+            Reach out for backend, data, mobile, or full-stack opportunities across Canada. I am especially interested in reliable systems, useful products, and teams that care about craft.
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <a class="contact-link" href="mailto:yeryomenko.y@gmail.com">
+            <span class="contact-link__index">01</span>
+            <span class="contact-link__text">
+              <span>Email</span>
+              <span>Send mail</span>
+            </span>
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg class="icon-stroke" viewBox="0 0 24 24" focusable="false">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </span>
+            <span class="contact-link__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 17 17 7"></path>
+                <path d="M9 7h8v8"></path>
+              </svg>
+            </span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/yegory/" target="_blank" rel="noreferrer">
+            <span class="contact-link__index">02</span>
+            <span class="contact-link__text">
+              <span>LinkedIn</span>
+              <span>Connect</span>
+            </span>
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg class="icon-fill" viewBox="0 0 24 24" focusable="false">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.34 8.01h4.3V23H.34V8.01ZM7.57 8.01h4.12v2.05h.06c.57-1.08 1.98-2.22 4.07-2.22 4.36 0 5.16 2.87 5.16 6.59V23h-4.3v-7.6c0-1.81-.03-4.14-2.52-4.14-2.52 0-2.91 1.97-2.91 4.01V23H7.57V8.01Z"></path>
+              </svg>
+            </span>
+            <span class="contact-link__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 17 17 7"></path>
+                <path d="M9 7h8v8"></path>
+              </svg>
+            </span>
+          </a>
+          <a class="contact-link" href="https://github.com/yegory" target="_blank" rel="noreferrer">
+            <span class="contact-link__index">03</span>
+            <span class="contact-link__text">
+              <span>GitHub</span>
+              <span>Source</span>
+            </span>
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg class="icon-fill" viewBox="0 0 24 24" focusable="false">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18A10.9 10.9 0 0 1 12 6.07c.98 0 1.95.13 2.87.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.42-2.69 5.38-5.25 5.67.42.36.78 1.06.78 2.14v3.16c0 .31.21.67.79.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"></path>
+              </svg>
+            </span>
+            <span class="contact-link__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 17 17 7"></path>
+                <path d="M9 7h8v8"></path>
+              </svg>
+            </span>
+          </a>
+          <a class="contact-link" href="https://leetcode.com/u/yegorye/" target="_blank" rel="noreferrer">
+            <span class="contact-link__index">04</span>
+            <span class="contact-link__text">
+              <span>LeetCode</span>
+              <span>Practice</span>
+            </span>
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg class="icon-stroke" viewBox="0 0 24 24" focusable="false">
+                <path d="m9 18-6-6 6-6"></path>
+                <path d="m15 6 6 6-6 6"></path>
+                <path d="m14 4-4 16"></path>
+              </svg>
+            </span>
+            <span class="contact-link__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 17 17 7"></path>
+                <path d="M9 7h8v8"></path>
+              </svg>
+            </span>
+          </a>
+          <a class="contact-link" href="assets/docs/resume-yegor-yeryomenko.pdf" target="_blank" rel="noreferrer">
+            <span class="contact-link__index">05</span>
+            <span class="contact-link__text">
+              <span>Resume PDF</span>
+              <span>Open CV</span>
+            </span>
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg class="icon-stroke" viewBox="0 0 24 24" focusable="false">
+                <path d="M7 3h7l5 5v13H7z"></path>
+                <path d="M14 3v6h5"></path>
+                <path d="M10 13h6"></path>
+                <path d="M10 17h4"></path>
+              </svg>
+            </span>
+            <span class="contact-link__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 17 17 7"></path>
+                <path d="M9 7h8v8"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <a class="brand brand--footer" href="#top" aria-label="Back to top">
+          <span class="brand__mark">
+            <img src="assets/icons/icon.png" alt="">
+          </span>
+          <span class="brand__text">Yegor Y.</span>
+        </a>
+        <a class="footer__top-link" href="#top" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M12 19V5"></path>
+            <path d="m5 12 7-7 7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

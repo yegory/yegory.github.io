@@ -1,31 +1,45 @@
-## Yegor Yeryomenko - Portfolio
+# Yegor Yeryomenko Portfolio
 
-Welcome to my portfolio website! This site showcases some of the projects I have worked on, highlighting my skills and experience in software development and computer science.
+Static personal website for Yegor Yeryomenko, deployed with GitHub Pages from the `main` branch of `yegory.github.io`.
 
----
+The site is built with plain HTML, CSS, and JavaScript. There is no build step or package install required.
 
-### About Me
+## Local Preview
 
-Hello! I'm Yegor Yeryomenko, a 22-year-old from Kazakhstan, currently living in Vancouver, BC, Canada. In May 2024, I completed my Bachelor’s degree in Computer Science at the University of British Columbia (with Distinction).
+Run a local static server from the repository root:
 
-I'm passionate about creating efficient, impactful software solutions and have a strong technical foundation, including experience with languages like Java, Python, C/C++, JavaScript, and Swift. Beyond my technical skills, I bring dedication, curiosity, and a drive to constantly learn and grow.
+```bash
+python3 -m http.server 4173
+```
 
----
+Then open:
 
-### Work Status
+```text
+http://localhost:4173/
+```
 
-I hold a valid Canadian open work permit and am actively seeking job opportunities. I'm eager to contribute my skills and experience to a team where my profile aligns with the employer's requirements.
+Opening `index.html` directly in a browser also works for quick checks, but serving the folder locally better matches GitHub Pages behavior.
 
-If you think I might be a fit for your team, please feel free to reach out!
+## Deployment
 
----
+GitHub Pages serves user sites from the repository named `<username>.github.io`. This repo should publish from:
 
-Thank you for visiting my portfolio! I hope you find my work interesting, and I look forward to potential opportunities to connect.
+```text
+main / root
+```
 
----
+After changes are committed and pushed to `main`, GitHub Pages will publish the updated site at:
 
-#### Contact Information:
+```text
+https://yegory.github.io/
+```
 
-- **Email**: yeryomenko.y@gmail.com
-- **Location**: Vancouver, BC, Canada
-- **View** [My Resume](images/resume-yegor_y.pdf)
+The homepage URL should be `/`, not `/index.html`. The site includes a small `404.html` fallback so stale or extensionless paths redirect back to the homepage.
+
+## Structure
+
+- `index.html` - single-page portfolio
+- `css/styles.css` - responsive layout and visual styling
+- `js/main.js` - navigation, scroll state, modals, carousel behavior, and interactions
+- `assets/` - images, videos, documents, and icons
+- `.nojekyll` - keeps GitHub Pages from processing the site with Jekyll

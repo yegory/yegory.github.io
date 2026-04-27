@@ -1,0 +1,14 @@
+{
+  "name": "Yegor Yeryomenko",
+  "short_name": "Yegor Y.",
+  "icons": [
+    {
+      "src": "assets/icons/icon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#151610",
+  "background_color": "#f7f8f4",
+  "display": "standalone"
+}

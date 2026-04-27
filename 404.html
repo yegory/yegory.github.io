@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecting | Yegor Yeryomenko</title>
+    <script>
+      const target = `/${window.location.search}${window.location.hash}`;
+      window.location.replace(target);
+    </script>
+    <meta http-equiv="refresh" content="0; url=/">
+  </head>
+  <body>
+    <p><a href="/">Go to homepage</a></p>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 # Yegor Yeryomenko
 
-Personal portfolio website for Yegor Yeryomenko, a Vancouver-based full-stack developer with experience across SaaS platforms, backend systems, data workflows, mobile apps, and frontend interfaces.
+Hello! You landed on my personal portfolio website repository. I am a Vancouver-based full-stack developer with experience across SaaS platforms, backend systems, data workflows, mobile apps, and frontend interfaces, currently looking for full-stack and backend opportunities. Feel free to reach out!
 
 Live site: [yegory.github.io](https://yegory.github.io/)
 
@@ -10,7 +10,7 @@ Live site: [yegory.github.io](https://yegory.github.io/)
 - LinkedIn: [linkedin.com/in/yegory](https://www.linkedin.com/in/yegory/)
 - Resume: [resume-yegor-yeryomenko.pdf](assets/docs/resume-yegor-yeryomenko.pdf)
 
-## Profile
+## About me
 
 I am from Kazakhstan and now live in Vancouver, Canada. I hold a UBC B.Sc. in Computer Science with Distinction and an open Canadian work permit. I am open to opportunities across Canada and willing to relocate.
 

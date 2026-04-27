@@ -1,45 +1,33 @@
-# Yegor Yeryomenko Portfolio
+# Yegor Yeryomenko
 
-Static personal website for Yegor Yeryomenko, deployed with GitHub Pages from the `main` branch of `yegory.github.io`.
+Personal portfolio website for Yegor Yeryomenko, a Vancouver-based full-stack developer with experience across SaaS platforms, backend systems, data workflows, mobile apps, and frontend interfaces.
 
-The site is built with plain HTML, CSS, and JavaScript. There is no build step or package install required.
+Live site: [yegory.github.io](https://yegory.github.io/)
 
-## Local Preview
+## Quick Links
 
-Run a local static server from the repository root:
+- Email: [yeryomenko.y@gmail.com](mailto:yeryomenko.y@gmail.com)
+- LinkedIn: [linkedin.com/in/yegory](https://www.linkedin.com/in/yegory/)
+- Resume: [resume-yegor-yeryomenko.pdf](assets/docs/resume-yegor-yeryomenko.pdf)
 
-```bash
-python3 -m http.server 4173
-```
+## Profile
 
-Then open:
+I am from Kazakhstan and now live in Vancouver, Canada. I hold a UBC B.Sc. in Computer Science with Distinction and an open Canadian work permit. I am open to opportunities across Canada and willing to relocate.
 
-```text
-http://localhost:4173/
-```
+My work focuses on building reliable software with practical product value: shipping features, designing secure APIs, moving complex data safely, and turning backend systems into useful user-facing experiences.
 
-Opening `index.html` directly in a browser also works for quick checks, but serving the folder locally better matches GitHub Pages behavior.
+## Experience
 
-## Deployment
+- Software Developer at OlaTech Corporation, building and enhancing a SaaS platform for associations across membership management, workflows, reporting, and communications.
+- Developed secure REST APIs for mobile authentication, messaging, and user data workflows.
+- Designed a data migration framework for complex interdependent entities across environments.
+- Built analytics dashboards, data pipelines, external integrations, and event-driven microservices using Kafka.
+- Teaching Assistant for Applied Machine Learning at the University of British Columbia, supporting students with Python, ML concepts, debugging, and technical course work.
 
-GitHub Pages serves user sites from the repository named `<username>.github.io`. This repo should publish from:
+## Technical Stack
 
-```text
-main / root
-```
-
-After changes are committed and pushed to `main`, GitHub Pages will publish the updated site at:
-
-```text
-https://yegory.github.io/
-```
-
-The homepage URL should be `/`, not `/index.html`. The site includes a small `404.html` fallback so stale or extensionless paths redirect back to the homepage.
-
-## Structure
-
-- `index.html` - single-page portfolio
-- `css/styles.css` - responsive layout and visual styling
-- `js/main.js` - navigation, scroll state, modals, carousel behavior, and interactions
-- `assets/` - images, videos, documents, and icons
-- `.nojekyll` - keeps GitHub Pages from processing the site with Jekyll
+- Languages: Java, Python, TypeScript, JavaScript, Swift, SQL, C/C++, Haskell
+- Backend and data: Spring Boot, REST APIs, Spring Data JPA, Kafka, MySQL, Oracle DB, JDBC, data pipelines
+- Frontend and mobile: React, SwiftUI, Node.js, HTML, CSS, Three.js, WebGL, Java Swing
+- Tools and cloud: Git, Gradle, Postman, AWS, Jenkins, Zabbix, JUnit, Mocha, Chai
+- Practices: data migration, microservices, authentication, reporting dashboards, test-driven development, Agile/Scrum, machine learning, product-minded delivery

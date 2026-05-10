@@ -8,7 +8,7 @@ Live site: [yegory.github.io](https://yegory.github.io/)
 
 - Email: [yeryomenko.y@gmail.com](mailto:yeryomenko.y@gmail.com)
 - LinkedIn: [linkedin.com/in/yegory](https://www.linkedin.com/in/yegory/)
-- Resume: [resume-yegor-yeryomenko.pdf](assets/docs/resume-yegor-yeryomenko.pdf)
+- Resume: [Yegor_Yeryomenko_Resume.pdf](assets/docs/Yegor_Yeryomenko_Resume.pdf)
 
 ## About me
 

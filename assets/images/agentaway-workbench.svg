@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">AgentAway GitHub issue workbench interface</title>
+  <desc id="desc">A dashboard mockup showing repositories, GitHub App setup, agent runs, and command workflow for AgentAway.</desc>
+  <rect width="1440" height="900" fill="#f7f8fb"/>
+  <rect x="70" y="60" width="1300" height="780" rx="28" fill="#ffffff" stroke="#d8dee8" stroke-width="2"/>
+  <rect x="70" y="60" width="1300" height="96" rx="28" fill="#17202a"/>
+  <rect x="70" y="128" width="1300" height="28" fill="#17202a"/>
+  <rect x="104" y="88" width="52" height="52" rx="12" fill="#176b5d"/>
+  <text x="130" y="121" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">AW</text>
+  <text x="176" y="111" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">AgentAway</text>
+  <text x="176" y="134" fill="#cbd5df" font-family="Arial, Helvetica, sans-serif" font-size="17">GitHub issue workbench for supervised coding-agent runs</text>
+  <rect x="1094" y="91" width="82" height="34" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="#5d6876"/>
+  <text x="1135" y="113" text-anchor="middle" fill="#f7f8fb" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Runs</text>
+  <rect x="1192" y="91" width="82" height="34" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="#5d6876"/>
+  <text x="1233" y="113" text-anchor="middle" fill="#f7f8fb" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Setup</text>
+  <rect x="1290" y="91" width="50" height="34" rx="8" fill="#176b5d"/>
+  <text x="1315" y="113" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">User</text>
+
+  <rect x="104" y="192" width="568" height="162" rx="14" fill="#ffffff" stroke="#d8dee8" stroke-width="2"/>
+  <text x="130" y="231" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Setup checks</text>
+  <rect x="510" y="202" width="122" height="34" rx="17" fill="#fff0d7"/>
+  <text x="571" y="224" text-anchor="middle" fill="#a05a00" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">3 warnings</text>
+  <rect x="130" y="260" width="14" height="14" rx="7" fill="#a05a00"/>
+  <text x="160" y="273" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">missing provider key</text>
+  <text x="160" y="299" fill="#5d6876" font-family="Arial, Helvetica, sans-serif" font-size="16">Add BYOK credentials before asking agents to plan or code.</text>
+  <rect x="130" y="322" width="14" height="14" rx="7" fill="#a05a00"/>
+  <text x="160" y="336" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">github app install</text>
+  <text x="330" y="336" fill="#5d6876" font-family="Arial, Helvetica, sans-serif" font-size="16">required for repository access</text>
+
+  <rect x="704" y="192" width="632" height="162" rx="14" fill="#ffffff" stroke="#d8dee8" stroke-width="2"/>
+  <text x="730" y="231" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Command workflow</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">
+    <rect x="730" y="266" width="100" height="46" rx="12" fill="#dff4ee"/>
+    <text x="780" y="295" text-anchor="middle" fill="#0f4f44">/plan</text>
+    <path d="M842 289h52" stroke="#5d6876" stroke-width="3" stroke-linecap="round"/>
+    <path d="M886 280l13 9-13 9" fill="none" stroke="#5d6876" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="908" y="266" width="116" height="46" rx="12" fill="#eef2f7"/>
+    <text x="966" y="295" text-anchor="middle" fill="#17202a">review</text>
+    <path d="M1036 289h52" stroke="#5d6876" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1080 280l13 9-13 9" fill="none" stroke="#5d6876" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1102" y="266" width="116" height="46" rx="12" fill="#dff4ee"/>
+    <text x="1160" y="295" text-anchor="middle" fill="#0f4f44">/proceed</text>
+    <path d="M1230 289h44" stroke="#5d6876" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1266 280l13 9-13 9" fill="none" stroke="#5d6876" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1288" y="266" width="26" height="46" rx="8" fill="#176b5d"/>
+  </g>
+
+  <rect x="104" y="386" width="390" height="356" rx="14" fill="#ffffff" stroke="#d8dee8" stroke-width="2"/>
+  <text x="130" y="429" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Repositories</text>
+  <rect x="130" y="462" width="318" height="68" rx="12" fill="#eef2f7" stroke="#d8dee8"/>
+  <text x="154" y="489" fill="#176b5d" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Public</text>
+  <text x="154" y="514" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">yegory/AgentAway</text>
+  <rect x="130" y="550" width="318" height="68" rx="12" fill="#eef2f7" stroke="#d8dee8"/>
+  <text x="154" y="577" fill="#176b5d" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Private</text>
+  <text x="154" y="602" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">linked/repository</text>
+  <rect x="130" y="638" width="318" height="68" rx="12" fill="#eef2f7" stroke="#d8dee8"/>
+  <text x="154" y="665" fill="#176b5d" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Synced</text>
+  <text x="154" y="690" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">issues and runs</text>
+
+  <rect x="526" y="386" width="390" height="356" rx="14" fill="#ffffff" stroke="#d8dee8" stroke-width="2"/>
+  <text x="552" y="429" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Recent runs</text>
+  <rect x="552" y="466" width="316" height="66" rx="12" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="576" y="492" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">#42 plan run</text>
+  <text x="576" y="518" fill="#5d6876" font-family="Arial, Helvetica, sans-serif" font-size="16">/plan by maintainer</text>
+  <rect x="746" y="484" width="94" height="28" rx="14" fill="#dff4ee"/>
+  <text x="793" y="503" text-anchor="middle" fill="#0f4f44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">planned</text>
+  <rect x="552" y="552" width="316" height="66" rx="12" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="576" y="578" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">#43 fix parser</text>
+  <text x="576" y="604" fill="#5d6876" font-family="Arial, Helvetica, sans-serif" font-size="16">/fix add tests max 2 files</text>
+  <rect x="722" y="570" width="118" height="28" rx="14" fill="#eef2f7"/>
+  <text x="781" y="589" text-anchor="middle" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">draft PR</text>
+  <rect x="552" y="638" width="316" height="66" rx="12" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="576" y="664" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">#44 revise plan</text>
+  <text x="576" y="690" fill="#5d6876" font-family="Arial, Helvetica, sans-serif" font-size="16">/fixplan keep scope small</text>
+
+  <rect x="948" y="386" width="388" height="356" rx="14" fill="#ffffff" stroke="#d8dee8" stroke-width="2"/>
+  <text x="974" y="429" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Safety model</text>
+  <rect x="974" y="464" width="316" height="52" rx="12" fill="#dff4ee"/>
+  <text x="998" y="497" fill="#0f4f44" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">HMAC webhook verification</text>
+  <rect x="974" y="536" width="316" height="52" rx="12" fill="#eef2f7"/>
+  <text x="998" y="569" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">Encrypted BYOK provider keys</text>
+  <rect x="974" y="608" width="316" height="52" rx="12" fill="#eef2f7"/>
+  <text x="998" y="641" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">Scoped API tokens and audits</text>
+  <rect x="974" y="680" width="316" height="52" rx="12" fill="#fff0d7"/>
+  <text x="998" y="713" fill="#a05a00" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">No default-branch writes</text>
+</svg>

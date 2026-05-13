@@ -187,33 +187,65 @@ const skillCarousel = document.querySelector(".skill-groups");
 const skillCarouselMedia = window.matchMedia("(max-width: 980px)");
 
 if (skillCarousel && !prefersReducedMotion) {
-  const autoScrollSpeed = 34;
-  const manualPauseMs = 5000;
-  const middlePauseMs = 1000;
+  const autoScrollSpeed = 51;
+  const manualPauseMs = 650;
+  const originalSkillGroups = [...skillCarousel.children];
   let autoScrollFrame = null;
   let autoScrollPreviousTime = 0;
-  let autoScrollDirection = 1;
   let autoScrollPosition = skillCarousel.scrollLeft;
   let pauseUntil = 0;
   let pointerIsDown = false;
   let internalScrollUntil = 0;
-  let middlePauseDirection = 0;
 
-  const getMaxScroll = () => Math.max(0, skillCarousel.scrollWidth - skillCarousel.clientWidth);
-  const canAutoScrollSkills = () => skillCarouselMedia.matches && getMaxScroll() > 1;
+  const cloneSkillGroup = (element) => {
+    const clone = element.cloneNode(true);
+    clone.dataset.carouselClone = "true";
+    clone.setAttribute("aria-hidden", "true");
+    return clone;
+  };
+
+  if (!skillCarousel.dataset.infiniteCarouselReady && originalSkillGroups.length > 1) {
+    const beforeClones = originalSkillGroups.map(cloneSkillGroup);
+    const afterClones = originalSkillGroups.map(cloneSkillGroup);
+    skillCarousel.prepend(...beforeClones);
+    skillCarousel.append(...afterClones);
+    skillCarousel.dataset.infiniteCarouselReady = "true";
+  }
+
+  const getLoopWidth = () => Math.max(0, skillCarousel.scrollWidth / 3);
+  const canAutoScrollSkills = () => skillCarouselMedia.matches && getLoopWidth() > skillCarousel.clientWidth + 1;
   const setAutoScrolling = (isAutoScrolling) => {
     skillCarousel.classList.toggle("is-auto-scrolling", isAutoScrolling);
   };
+  const normalizeInfiniteScroll = (scrollLeft) => {
+    const loopWidth = getLoopWidth();
+    if (!loopWidth) return scrollLeft;
+
+    let normalized = scrollLeft;
+    while (normalized < loopWidth * 0.5) normalized += loopWidth;
+    while (normalized >= loopWidth * 1.5) normalized -= loopWidth;
+    return normalized;
+  };
+  const syncInfiniteScroll = () => {
+    if (!skillCarouselMedia.matches) return skillCarousel.scrollLeft;
+    const normalized = normalizeInfiniteScroll(skillCarousel.scrollLeft);
+    if (Math.abs(normalized - skillCarousel.scrollLeft) > 1) {
+      internalScrollUntil = performance.now() + 120;
+      skillCarousel.scrollLeft = normalized;
+    }
+    autoScrollPosition = normalized;
+    return normalized;
+  };
   const pauseForManualScroll = () => {
-    autoScrollPosition = skillCarousel.scrollLeft;
+    autoScrollPosition = syncInfiniteScroll();
     pauseUntil = performance.now() + manualPauseMs;
     setAutoScrolling(false);
   };
 
   const setInternalScroll = (scrollLeft) => {
-    autoScrollPosition = scrollLeft;
+    autoScrollPosition = normalizeInfiniteScroll(scrollLeft);
     internalScrollUntil = performance.now() + 120;
-    skillCarousel.scrollLeft = scrollLeft;
+    skillCarousel.scrollLeft = autoScrollPosition;
   };
 
   const stepSkillCarousel = (timestamp) => {
@@ -227,31 +259,7 @@ if (skillCarousel && !prefersReducedMotion) {
     setAutoScrolling(shouldAutoScroll);
 
     if (shouldAutoScroll) {
-      const maxScroll = getMaxScroll();
-      const middleScroll = maxScroll / 2;
-      const nextScroll = autoScrollPosition + autoScrollDirection * autoScrollSpeed * elapsedSeconds;
-
-      if (nextScroll >= maxScroll) {
-        setInternalScroll(maxScroll);
-        autoScrollDirection = -1;
-        middlePauseDirection = 0;
-      } else if (nextScroll <= 0) {
-        setInternalScroll(0);
-        autoScrollDirection = 1;
-        middlePauseDirection = 0;
-      } else if (
-        maxScroll > 24 &&
-        middlePauseDirection !== autoScrollDirection &&
-        ((autoScrollDirection > 0 && autoScrollPosition < middleScroll && nextScroll >= middleScroll) ||
-          (autoScrollDirection < 0 && autoScrollPosition > middleScroll && nextScroll <= middleScroll))
-      ) {
-        setInternalScroll(middleScroll);
-        middlePauseDirection = autoScrollDirection;
-        pauseUntil = timestamp + middlePauseMs;
-        setAutoScrolling(false);
-      } else {
-        setInternalScroll(nextScroll);
-      }
+      setInternalScroll(autoScrollPosition + autoScrollSpeed * elapsedSeconds);
     }
 
     autoScrollFrame = window.requestAnimationFrame(stepSkillCarousel);
@@ -274,32 +282,46 @@ if (skillCarousel && !prefersReducedMotion) {
 
   skillCarousel.addEventListener("pointerdown", () => {
     pointerIsDown = true;
-    autoScrollPosition = skillCarousel.scrollLeft;
+    autoScrollPosition = syncInfiniteScroll();
     internalScrollUntil = 0;
-    middlePauseDirection = 0;
     setAutoScrolling(false);
   });
 
   window.addEventListener("pointerup", () => {
     pointerIsDown = false;
-    autoScrollPosition = skillCarousel.scrollLeft;
+    autoScrollPosition = syncInfiniteScroll();
+    pauseUntil = performance.now() + manualPauseMs;
   });
 
   window.addEventListener("pointercancel", () => {
     pointerIsDown = false;
-    autoScrollPosition = skillCarousel.scrollLeft;
+    autoScrollPosition = syncInfiniteScroll();
+    pauseUntil = performance.now() + manualPauseMs;
   });
 
   skillCarouselMedia.addEventListener?.("change", () => {
     pauseUntil = 0;
     autoScrollPreviousTime = 0;
-    autoScrollDirection = 1;
-    autoScrollPosition = skillCarousel.scrollLeft;
-    middlePauseDirection = 0;
     setAutoScrolling(false);
+    window.requestAnimationFrame(() => {
+      const loopWidth = getLoopWidth();
+      if (skillCarouselMedia.matches && loopWidth) {
+        skillCarousel.scrollLeft = loopWidth;
+        autoScrollPosition = loopWidth;
+      } else {
+        autoScrollPosition = skillCarousel.scrollLeft;
+      }
+    });
   });
 
-  autoScrollFrame = window.requestAnimationFrame(stepSkillCarousel);
+  window.requestAnimationFrame(() => {
+    const loopWidth = getLoopWidth();
+    if (skillCarouselMedia.matches && loopWidth) {
+      skillCarousel.scrollLeft = loopWidth;
+      autoScrollPosition = loopWidth;
+    }
+    autoScrollFrame = window.requestAnimationFrame(stepSkillCarousel);
+  });
 }
 
 const canTiltCards = window.matchMedia("(hover: hover) and (pointer: fine)").matches && !prefersReducedMotion;
@@ -373,6 +395,46 @@ if (hero && !prefersReducedMotion) {
 }
 
 const projectDetails = [
+  {
+    id: "agentaway",
+    type: "AI developer tool",
+    title: "AgentAway",
+    summary:
+      "A full-stack GitHub App for supervised coding-agent runs: users link repositories, store encrypted provider keys, trigger /plan and /fix commands from issues or the web workbench, and review draft PR attempts before anything is merged.",
+    images: [
+      {
+        src: "assets/images/agentaway-workbench.png",
+        alt: "AgentAway GitHub issue workbench dashboard showing repositories, agent runs, and safety checks",
+      },
+    ],
+    links: [{ label: "GitHub repository", href: "https://github.com/yegory/AgentAway" }],
+    tags: ["Python", "TypeScript", "FastAPI", "Next.js", "Celery", "PostgreSQL", "Docker", "GitHub Apps"],
+    sections: [
+      {
+        title: "Questions Addressed",
+        items: [
+          "How can a coding agent be useful while still keeping the human maintainer in control?",
+          "How should GitHub issue comments, web commands, and background worker jobs share the same run model?",
+          "How can provider keys, API tokens, webhook signatures, and repository permissions be handled safely in a public app?",
+        ],
+      },
+      {
+        title: "Implementation Details",
+        items: [
+          "Built a Dockerized monorepo with FastAPI, Next.js, Celery, Redis, PostgreSQL, and a GitHub App integration.",
+          "Implemented HMAC-verified GitHub webhooks, delivery deduplication, issue-command parsing, and user-scoped AgentRun records.",
+          "Secured webhooks, encrypted provider keys, scoped API tokens, repository permissions, rate limits, and audits.",
+          "Created worker tasks that generate plans, revise plans, clone repositories, create safe branches, write generated files, run detected tests, push branches, and open draft PRs.",
+          "Added conservative policy checks so generated patches are limited by file count, avoid secrets and workflow paths, and never write directly to the default branch.",
+        ],
+      },
+      {
+        title: "Outcome",
+        text:
+          "AgentAway shows my ability to design a real product surface around AI agents, not just call a model API. The interesting work is in the surrounding system: auth, persistence, GitHub App permissions, encrypted credentials, queue-backed execution, safety checks, auditability, and a user interface that makes agent activity reviewable.",
+      },
+    ],
+  },
   {
     id: "interval-timer",
     type: "iOS app",
@@ -461,7 +523,7 @@ const projectDetails = [
     type: "Backend query engine",
     title: "UBC Course and Room Explorer",
     summary:
-      "A TypeScript and Node.js query application for extracting insights from dynamic JSON datasets, exposed through an API and built iteratively against strict customer specifications.",
+      "A TypeScript and Node query application for extracting insights from dynamic JSON datasets, exposed through an API and built iteratively against strict customer specifications.",
     images: [
       {
         src: "assets/images/ubc-course-room-explorer.png",
@@ -469,7 +531,7 @@ const projectDetails = [
       },
     ],
     links: [],
-    tags: ["TypeScript", "Node.js", "Mocha.js", "Chai.js", "Postman", "Agile"],
+    tags: ["TypeScript", "Node", "Mocha", "Chai", "Postman", "Agile"],
     sections: [
       {
         title: "Questions Addressed",

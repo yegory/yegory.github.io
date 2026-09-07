@@ -1,6 +1,6 @@
 # Yegor Yeryomenko
 
-Personal portfolio website for Yegor Yeryomenko, a Vancouver-based full-stack developer with experience across SaaS platforms, backend systems, AI-assisted developer tools, data workflows, mobile apps, and frontend interfaces.
+Personal portfolio website for Yegor Yeryomenko, a Burnaby, BC-based full-stack developer with experience across SaaS platforms, backend systems, AI-assisted developer tools, data workflows, mobile apps, and frontend interfaces.
 
 Live site: [yegory.github.io](https://yegory.github.io/)
 
@@ -12,7 +12,7 @@ Live site: [yegory.github.io](https://yegory.github.io/)
 
 ## Profile
 
-I am from Kazakhstan and now live in Vancouver, Canada. I hold a UBC B.Sc. in Computer Science with Distinction and an open Canadian work permit. I am open to opportunities across Canada and willing to relocate.
+I am from Kazakhstan and now live in Burnaby, BC, Canada. I hold a UBC B.Sc. in Computer Science with Distinction and an open Canadian work permit. I am open to opportunities across Canada and willing to relocate.
 
 My work focuses on building reliable software with practical product value: shipping features, designing secure APIs, moving complex data safely, and turning backend systems into useful user-facing experiences. Recent project work includes AgentAway, a GitHub App and web workbench for supervised coding-agent runs.
 
